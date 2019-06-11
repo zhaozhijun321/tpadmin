@@ -1,0 +1,9 @@
+<?php
+//000000000000
+ exit();?>
+a:5:{i:0;a:4:{s:2:"id";i:149;s:4:"name";s:11:"province_id";s:4:"type";s:6:"select";s:7:"content";s:28:"value1|title1
+value2|title2";}i:1;a:4:{s:2:"id";i:150;s:4:"name";s:7:"city_id";s:4:"type";s:6:"select";s:7:"content";s:28:"value1|title1
+value2|title2";}i:2;a:4:{s:2:"id";i:151;s:4:"name";s:7:"area_id";s:4:"type";s:6:"select";s:7:"content";s:28:"value1|title1
+value2|title2";}i:3;a:4:{s:2:"id";i:161;s:4:"name";s:11:"detailsArea";s:4:"type";s:4:"text";s:7:"content";s:28:"value1|title1
+value2|title2";}i:4;a:4:{s:2:"id";i:162;s:4:"name";s:11:"contact_way";s:4:"type";s:4:"text";s:7:"content";s:28:"value1|title1
+value2|title2";}}

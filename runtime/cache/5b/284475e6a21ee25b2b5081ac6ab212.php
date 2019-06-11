@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+a:1:{i:0;a:21:{s:2:"id";i:73;s:4:"type";s:7:"channel";s:8:"model_id";i:6;s:9:"parent_id";i:72;s:4:"name";s:12:"长财简介";s:5:"image";s:0:"";s:4:"flag";s:0:"";s:8:"keywords";s:0:"";s:11:"description";s:415:"长财咨询的业务遍及全国，截止2019年1月已设立分子公司60多家，拥有员工1000余人，并成立华北，华东，华中，华南，东北，西北，成渝，山东，东南，西南10大区域技术咨询中心，可为各类客户提供各种财务、激励、商业运作的企业实战经验、工具、案例、技能辅导，帮助企业实现复制，打造赚钱到值钱的过程。";s:7:"diyname";s:7:"jianjie";s:7:"outlink";s:0:"";s:5:"items";i:0;s:5:"weigh";i:73;s:10:"channeltpl";s:19:"channel_guanyu.html";s:7:"listtpl";s:14:"list_news.html";s:7:"showtpl";s:14:"show_news.html";s:8:"pagesize";i:10;s:12:"iscontribute";i:0;s:10:"createtime";i:1549186523;s:10:"updatetime";i:1552313007;s:6:"status";s:6:"normal";}}

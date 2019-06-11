@@ -1,0 +1,6 @@
+<?php
+//000000000000
+ exit();?>
+a:2:{i:0;a:23:{s:2:"id";i:136;s:8:"model_id";i:1;s:10:"diyform_id";i:0;s:4:"name";s:6:"author";s:4:"type";s:6:"string";s:5:"title";s:6:"作者";s:7:"content";s:28:"value1|title1
+value2|title2";s:12:"defaultvalue";s:0:"";s:4:"rule";s:0:"";s:3:"msg";s:0:"";s:2:"ok";s:0:"";s:3:"tip";s:0:"";s:8:"decimals";i:0;s:6:"length";i:255;s:7:"minimum";i:0;s:7:"maximum";i:0;s:6:"extend";s:0:"";s:5:"weigh";i:136;s:10:"createtime";i:1508990735;s:10:"updatetime";i:1508991985;s:12:"iscontribute";i:1;s:8:"isfilter";i:1;s:6:"status";s:6:"normal";}i:1;a:23:{s:2:"id";i:153;s:8:"model_id";i:1;s:10:"diyform_id";i:0;s:4:"name";s:4:"sync";s:4:"type";s:6:"switch";s:5:"title";s:15:"同步第三方";s:7:"content";s:28:"value1|title1
+value2|title2";s:12:"defaultvalue";s:0:"";s:4:"rule";s:0:"";s:3:"msg";s:0:"";s:2:"ok";s:0:"";s:3:"tip";s:0:"";s:8:"decimals";i:0;s:6:"length";i:255;s:7:"minimum";i:0;s:7:"maximum";i:0;s:6:"extend";s:0:"";s:5:"weigh";i:153;s:10:"createtime";i:1548769690;s:10:"updatetime";i:1548771512;s:12:"iscontribute";i:1;s:8:"isfilter";i:0;s:6:"status";s:6:"normal";}}

@@ -1,0 +1,71 @@
+  {layout name="common/layout" /}
+    <link rel="stylesheet" href="__ADDON__/css/team.css?v={cms:config name='site.version'/}">
+    <style type="text/css">
+    body{
+        background:#f5f5f5;
+    }
+    </style>
+  <div class="cont-box">
+            <ul class="team-cate">
+                <li class="t-cate c-red" data-id="all">全部</li>
+                {cms:channelgroup id="tags" channel_id="63"}
+                <li class="t-cate" data-id="{$tags.id}">{$tags.name}</li>
+                {/cms:channelgroup}
+
+            </ul>
+            <ul class="t-items">
+                {cms:arclist id="hot" orderway="asc" orderby="weigh publishtime" channel="63" limit="150"}
+                <a href="{$hot.url}">
+                     
+                    <li>
+                        <div class="t-imgs">
+                            {$hot.img}
+                        </div>
+                        <div class="t-desc">
+                            <p class="name">{$hot.title}</p>
+                            <?php $biaoqian = explode("\r\n",$hot['description']);
+                                            for($i=0;$i<count($biaoqian);$i++){
+                                            ?>
+                                            <p class="desc">{$biaoqian[$i]}</p>
+                                            <?php
+                                            }
+                                             ?>
+                        </div>
+                    </li>
+                </a> 
+                {/cms:arclist}
+            </ul>
+        </div>
+         <script>
+        
+       
+            $('.t-cate').click(function () {
+                $(this).addClass('c-red').siblings().removeClass('c-red');
+                 var channel_id="{$__CHANNEL__->id}"
+                 var tag =$(this).attr('data-id')
+                var btn = $(this);
+                btn.attr("disabled", "disabled");
+                $.ajax({
+                    url: '/addons/cms/Channel/get_experts',
+                    type: 'POST',
+                    data: {'channel_id':channel_id,'tag':tag,'timeStamp':new Date().getTime()},
+                    dataType: 'json',
+                    success: function (json) {
+                        btn.removeAttr("disabled");
+                       if(json){
+                            $('.t-items').html(json); 
+                       
+                       }else{
+                        alert('出错了！')
+                       }
+                    },
+                    error: function () {
+                        btn.removeAttr("disabled");
+                         alert('刷新页面重试')
+
+                    }
+                });
+                return false;
+            })
+       
+    </script>

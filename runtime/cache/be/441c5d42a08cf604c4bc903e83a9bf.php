@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+a:2:{i:0;a:10:{s:2:"id";i:3;s:4:"type";s:5:"focus";s:4:"name";s:5:"focus";s:5:"title";s:12:"专家团队";s:5:"image";s:50:"/uploads/20190218/FrwabdY-uK-Fi9r2R5xqirJ4D2j6.png";s:3:"url";s:27:"/cms/c/zhuanjiatuandui.html";s:7:"content";s:135:"提供财税整体解决方案咨询，财税专项咨询；激励系统整体解决方案咨询，专项咨询；企业商业咨询。";s:10:"createtime";i:0;s:10:"updatetime";i:1550488879;s:6:"status";s:6:"normal";}i:1;a:10:{s:2:"id";i:2;s:4:"type";s:5:"focus";s:4:"name";s:5:"focus";s:5:"title";s:12:"长财风采";s:5:"image";s:50:"/uploads/20190403/FsBVDyAPtwWEsD7OnkxJU2DLHFbu.png";s:3:"url";s:25:"/cms/c/chanpinyufuwu.html";s:7:"content";s:150:"风采描述：提供财税整体解决方案咨询，财税专项咨询；激励系统整体解决方案咨询，专项咨询；企业商业咨询。";s:10:"createtime";i:0;s:10:"updatetime";i:1554294259;s:6:"status";s:6:"normal";}}

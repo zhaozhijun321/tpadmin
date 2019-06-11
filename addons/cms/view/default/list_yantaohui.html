@@ -1,0 +1,143 @@
+ {layout name="common/layout" /}
+  <link rel="stylesheet" href="__ADDON__/css/news-detail.css?v={cms:config name='site.version'/}">
+ <!-- 主体部分 -->
+   <div class="n-detail">
+        <div class="n-box-left">
+            <!-- <h2>最近新闻</h2> -->
+            <ul class="to-title">
+                {cms:channellist id="channel"  type="son" typeid="90" orderway="asc" ordery="weigh"}
+                <li class="{if condition="$__CHANNEL__.id eq $channel.id"}c-red{/if}" onclick="local('{$channel.url}')">{$channel.name}</li>
+                {/cms:channellist}
+            </ul>
+             <!-- 研讨会信息 -->
+            <div class="items yantao">
+                <div class="y-box">
+                    <div class="logos">
+                        <img src="__ADDON__/src/image/y1.png" alt="">
+                    </div>
+                    <div class="y-cont">
+                        <img src="__ADDON__/src/image/y-c1.png" alt="">
+                    </div>
+                </div>
+                <div class="y-box">
+                    <div class="logos">
+                        <img src="__ADDON__/src/image/y2.png" alt="">
+                    </div>
+                    <div class="y-cont">
+                        <img src="__ADDON__/src/image/y-c2.png" alt="">
+                    </div>
+                </div>
+                <div class="y-box">
+                    <div class="logos">
+                        <img src="__ADDON__/src/image/y3.png" alt="">
+                    </div>
+                    <div class="y-cont">
+                        <img src="__ADDON__/src/image/y-c3.png" alt="">
+                    </div>
+                </div>
+                <div class="y-box">
+                    <div class="logos">
+                        <img src="__ADDON__/src/image/y4.png" alt="">
+                    </div>
+                    <div class="y-cont">
+                        <img src="__ADDON__/src/image/y-c4.png" alt="">
+                    </div>
+                </div>
+                <div class="y-box">
+                    <div class="logos">
+                        <img src="__ADDON__/src/image/y5.png" alt="">
+                    </div>
+                    <div class="y-cont c-2">
+                        <img src="__ADDON__/src/image/y-c5-1.png" alt="">
+                        <img src="__ADDON__/src/image/y-c5-2.png" alt="">
+                        <img src="__ADDON__/src/image/y-c5-3.png" alt="">
+                        <img src="__ADDON__/src/image/y-c5-4.png" alt="">
+                    </div>
+                </div>
+                <div class="y-box">
+                    <div class="logos">
+                        <img src="__ADDON__/src/image/y6.png" alt="">
+                    </div>
+                    <div class="y-cont c-form">
+                        <!-- 留言 -->
+                        <div class="liuyan">
+                            <!-- 表单部分 -->
+                            <div class="msg-form" id="msg-form">
+                                <h2 class="title">填写您的信息</h2>
+                                    <form id="new-form" method="post" action="{:addon_url('cms/diyform/post')}">
+                                    {:token()}
+                                    {php}echo $diyform['fieldslist']{/php}
+                    
+                                   
+                                    </form>
+                                <div class="btn send">发送</div>
+                            </div>
+                            <!-- 提交成功之后的样式 -->
+                            <div class="success hide">
+                                <img src="__ADDON__/src/image/send.png" alt="" class="send-img">
+                                <p>您的需求已成功发送</p>
+                                <p>我们将在72小时内与您取得联系</p>
+                                <div class="sure">确定</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- 研讨会信息 -->
+        <div class="n-box-right rg-yantao">
+            <h2>{cms:channel name="name" /}</h2>
+            <!-- 右侧分类集合 -->
+            <div class="list">
+                <!-- 右侧小分类 -->
+                 {cms:yantaolist id="hot" row="7"}
+                <a href="{$hot.chanpin.url}">
+                    <div class="item">
+                        <p class="title">{$hot.chanpin.title}</p>
+                        <p class="times">{:date('m.d',strtotime($hot->begintime))}-{:date('d',strtotime($hot.endtime))}</p>
+                    </div>
+                </a>
+                {/cms:yantaolist}
+            </div>
+        </div>
+   </div>
+
+          <script>
+            page=0;
+        $('.loadMore').click(function(){
+            var channel_id="{$__CHANNEL__->id}"
+            page++;
+            var btn = $(this);
+            btn.attr("disabled", "disabled");
+            $.ajax({
+                url: '/addons/cms/Channel/get_list',
+                type: 'POST',
+                data: {page,channel_id},
+                dataType: 'json',
+                success: function (json) {
+                    btn.removeAttr("disabled");
+                   if(json){
+                    // console.log(json)
+                    if(json.length>0){
+                        var str='';
+                        for(var i=0;i<json.length;i++){
+                            str+=' <a href='+json[i].url+'><div class=item> <div class=image><img src="'+json[i].image+'"></div><div class=cont><h2>'+json[i].title+'</h2><p>'+json[i].description+'</p><p class=times>'+json[i].publishtime+'</p></div></div></a>'
+                        }
+                        $('.items').append(str); 
+                    }else{
+                        $('.loadMore').html('已经到底部了')
+                    }
+                   
+                   }else{
+                    alert('出错了！')
+                   }
+                },
+                error: function () {
+                    btn.removeAttr("disabled");
+                     alert('刷新页面重试')
+
+                }
+            });
+            return false;
+        })
+    </script>

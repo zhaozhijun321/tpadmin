@@ -1,0 +1,82 @@
+{layout name="common/layout" /}
+ <link rel="stylesheet" href="__ADDON__/css/details.css?v={cms:config name='site.version'/}">
+<div class="n-detail">
+    <!-- 左侧标准详情盒子部分 -->
+    <div class="n-box-left teachers">
+        <!-- 详情标题 -->
+        <!-- <h2>{$__ARCHIVES__->title}</h2>
+        <div class="shares">
+            <p class="time">{:date('Y.m.d',$__ARCHIVES__->createtime)}</p>
+            <p class="label">{$__CHANNEL__->name}</p>
+            <img src="__ADDON__/src/image/t-share.png" alt="" class="share" data-id="{$__ARCHIVES__->id}">
+        </div> -->
+        <!-- 专家图片位置 -->
+        <div class="teacher-img">
+            <img src="{$__ARCHIVES__->image}" alt="">
+        </div>
+        <!-- 专家详情 -->
+        <div class="detail-cont teachers-cont">
+            <!-- 只是为了样式,详情正文不用放在P标签中 -->
+            <p>{cms:archives name="content" /}</p>
+        </div>
+    </div>
+
+    <!-- 右侧根据实际详情页选择相对应的样式 -->
+    <!-- 右侧根据实际详情页选择相对应的样式 -->
+    <!-- 右侧根据实际详情页选择相对应的样式 -->
+
+    <!-- 推荐专家和主讲课程 -->
+    <div class="t-right ">
+        <!-- 推荐专家 -->
+        <div class="n-box-right">
+            <a href="{$__CHANNEL__->url}">
+                <h2>推荐{$__CHANNEL__->name}
+                <img src="__ADDON__/src/image/more2.png" alt="" class="icons">
+            </h2>
+            </a>
+            <!-- 右侧分类集合 -->
+            <div class="t-list">
+                <!-- 右侧小分类 -->
+                {cms:arclist id="item" row="4" orderby="weigh,publishtime" orderway="asc"  tags="$__ARCHIVES__->tags"}
+                {if condition="$item.id==$__ARCHIVES__->id"}
+                {else/}
+                <a href="{$item.url}">
+                    <div class="t-it">
+                        {$item.img}
+                        <p>{$item.title}</p>
+                    </div>
+                </a>
+                 {/if}
+            {/cms:arclist}
+            </div>
+        </div>
+
+        <!-- 主讲课程 -->
+        <div class="n-box-right" style="margin-top:50px">
+            <a href="/cms/c/chanpinyufuw">
+                <h2>主讲课程
+                <img src="__ADDON__/src/image/more2.png" alt="" class="icons">
+                </h2>
+            </a>
+           
+            <!-- 右侧分类集合 -->
+            <div class="list">
+                <!-- 右侧小分类 -->
+                {php}$list =\addons\cms\model\Archives::getzhujia(['row'=>2,'expert'=>$__ARCHIVES__->id]);{/php}
+
+                {foreach name="list" item="item"}
+                <!-- <a href="{$item->url}"> -->
+                    <div class="item p-item">
+                        <img src="{:cdnurl($item.image)}" alt="">
+                        <div class="p-heng"></div>
+                        <a href="{$item.url}" class="liaojie">了解更多</a>
+                    </div>
+                <!-- </a> -->
+                {/foreach}
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>

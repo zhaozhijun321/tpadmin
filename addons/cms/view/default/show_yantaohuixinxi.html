@@ -1,0 +1,44 @@
+{layout name="common/layout" /}
+ <link rel="stylesheet" href="__ADDON__/css/details.css?v={cms:config name='site.version'/}">
+<div class="n-detail">
+    <!-- 左侧标准详情盒子部分 -->
+    <div class="n-box-left">
+        <!-- 详情标题 -->
+        <h2>{$__ARCHIVES__->title}</h2>
+        <div class="shares">
+            <p class="time">{:date('Y.m.d',$__ARCHIVES__->createtime)}</p>
+            <p class="label">{$__CHANNEL__->name}</p>
+            <img src="__ADDON__/src/image/t-share.png" alt="" class="share" data-id="{$__ARCHIVES__->id}>
+        </div>
+        <div class="detail-cont">
+            <!-- 只是为了样式,详情正文不用放在P标签中 -->
+            <p>{cms:archives name="content" /}</p>
+        </div>
+    </div>
+
+    <!-- 右侧根据实际详情页选择相对应的样式 -->
+    <!-- 右侧根据实际详情页选择相对应的样式 -->
+    <!-- 右侧根据实际详情页选择相对应的样式 -->
+
+    
+     <!-- 研讨会信息 -->
+        <div class="n-box-right rg-yantao">
+            <h2>研讨会信息</h2>
+            <!-- 右侧分类集合 -->
+            <div class="list">
+                <!-- 右侧小分类 -->
+                {cms:yantaolist id="hot" row="7"}
+                {if condition="$hot.id==$__ARCHIVES__->id"}
+                {else/}
+                <a href="{$hot.chanpin.url}">
+                    <div class="item">
+                        <p class="title">{$hot.chanpin.title}</p>
+                        <p class="times">{:date('m.d',strtotime($hot->begintime))}-{:date('d',strtotime($hot.endtime))}</p>
+                    </div>
+                </a>
+                {/if}
+            {/cms:yantaolist}
+            </div>
+        </div>
+    
+</div>

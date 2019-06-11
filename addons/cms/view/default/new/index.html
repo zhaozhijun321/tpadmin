@@ -1,0 +1,926 @@
+{layout name="common/layout" /}
+
+        <!-- 首页大轮播图 -->
+        <div class="swiper-container swiper-container1">
+            <div class="swiper-wrapper">
+                {cms:blocklist id="block" name="focus" row="5"}
+                <a href="{$block.url}">
+                <div class="swiper-slide"><img src="{$block.image}">
+                </a>
+                {/cms:blocklist}
+
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination1 swiper-pagination"></div>
+        </div>
+        <!-- 最近新闻 -->
+        <div class="news-box">
+            <div class="box-title">
+                <h2>最近新闻</h2>
+                <a href="#">
+                    <img src="../src/image/showMore.png" alt="">
+                </a>
+            </div>
+            <div class="news-items">
+                {cms:arclist id="new" model="1" addon="true" orderway="desc" orderby="publishtime"}
+                <div class="item">
+                    <a href="">
+                        <img src="{$new.imglink}" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>{$new.title}</h5>
+                        </a>
+                        <p class="cont">{$new.description}</p>
+                        <p class="date">{'Y.m.d',$new.publishtime}</p>
+                    </div>
+                </div>
+                {/cms:arclist}
+            </div>
+        </div>
+        <!-- 日历部分 -->
+        <div class="date-box">
+            <div class="box-title">
+                <h2>长财咨询课程日历</h2>
+                <a href="#">
+                    <img src="../src/image/showMore.png" alt="">
+                </a>
+            </div>
+            <!-- 日历控件 -->
+            <div class="date-com">
+                <div id="cc_date" class="cc_date"></div>
+                <!-- 日历控件右侧详情 -->
+                <div class="date-cont">
+                    <!-- 当前是当天没有课程的样式 -->
+                    <div class="month-ke hide">
+                        <div class="title">课程</div>
+                        <ul>
+                            <li class="item">
+                                <span class="ke-name">《激励系统》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                            <li class="item">
+                                <span class="ke-name">《激励系统》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                            <li class="item">
+                                <span class="ke-name">《财务人员高效工作方法》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                            <li class="item">
+                                <span class="ke-name">《老板税务风险管理》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                            <li class="item">
+                                <span class="ke-name">《“营改增”政策应对与纳税规划》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                            <li class="item">
+                                <span class="ke-name">《激励系统》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                            <li class="item">
+                                <span class="ke-name">《激励系统》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                            <li class="item">
+                                <span class="ke-name">《财务人员高效工作方法》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                            <li class="item">
+                                <span class="ke-name">《老板税务风险管理》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                            <li class="item">
+                                <span class="ke-name">《“营改增”政策应对与纳税规划》</span>
+                                <span class="time">2018.10.18</span>
+                                <span class="place">北京</span>
+                                <img src="../src/image/icon-pdf.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day-ke">
+                        <h2>《财务稽查重点与应对策略》-刘国东</h2>
+                        <div class="k-heng"></div>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家，拥有员工1000余人，并成立华北，华东，华中，华南，东北，西北，成渝，山东，东南，西南10大区域技术咨询中心，可为各类客户提供各种财务、激励、商业运作的企业实战经验、工具、案例、技能辅导，帮助企业实现复制，打造赚钱到值钱的过程。可为各类客户提供各种财务、激励、商业运作的企业实战经验、工具、案例、技能辅导，帮助企业实现复制，打造工具、案例、技能辅导，帮助企业实现复制，打造赚钱到值钱的过程。可为各类客户提供各种财务、激励、商业运作的企业实战经验、工具、案例、技能辅导，帮助企业实现复制，打造</p>
+                        <p class="time"><span>2019.01.19-01.22</span> | <span>北京</span> </p>
+                        <div class="day-bot">
+                            <a href="">了解更多</a>
+                            <img src="../src/image/icon-pdf.png" alt="">
+                        </div>
+                        <div class="lf-lr">
+                            <img src="../src/image/l-btn.png" alt="">
+                            <img src="../src/image/r-btn2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 关于我们 -->
+        <div class="guanyu">
+            <div class="box-title">
+                <h2>关于我们</h2>
+                <a href="#">
+                    <img src="../src/image/showMore.png" alt="">
+                </a>
+            </div>
+            <div class="box">
+                <!-- 关于我们左边 -->
+                <div class="box-left">
+                    <h2>长财咨询</h2>
+                    <div class="heng1"></div>
+                    <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家，拥有员工1000余人，并成立华北，华东，华中，华南，东北，西北，成渝，山东，东南，西南10大区域技术咨询中心，可为各类客户提供各种财务、激励、商业运作的企业实战经验、工具、案例、技能辅导，帮助企业实现复制，打造赚钱到值钱的过程。</p>
+                    <a href="#" class="get-more1">
+                        了解更多
+                        <img src="../src/image/showMore.png" alt="">
+                    </a>
+                    <ul>
+                        <li><p class="nums">100+</p><p class="txt">专家老师</p></li>
+                        <li><p class="nums">10000+</p><p class="txt">服务客户数量</p></li>
+                        <li><p class="nums">1000+</p><p class="txt">员工</p></li>
+                        <li><p class="nums">60+</p><p class="txt">分公司</p></li>
+                    </ul>
+                </div>
+                <!-- 视频部分 -->
+                <div class="box-right"></div>
+            </div>
+        </div>
+        <!-- 产品与服务 -->
+        <div class="product">
+            <div class="p-box">
+                <div class="box-title">
+                    <h2>产品与服务</h2>
+                    <a href="#">
+                        <img src="../src/image/showMore.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-container2 swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide p-items">
+                            <ul class="p-items">
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul class="p-items">
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul class="p-items">
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                                <li>
+                                    <img src="../src/image/pro1.png" alt="">
+                                    <div class="p-heng"></div>
+                                    <a href="" class="liaojie">了解更多</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination2 swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 专家团队 -->
+        <div class="team">
+            <div class="t-box">
+                <div class="box-title">
+                    <h2>专家团队</h2>
+                    <a href="#">
+                        <img src="../src/image/showMore.png" alt="">
+                    </a>
+                </div>
+                <div class="swiper-container3 swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul class="t-items">
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                                
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul class="t-items">
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                                
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul class="t-items">
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                                
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div class="t-imgs">
+                                            <img src="../src/image/teacher.png" alt="">
+                                        </div>
+                                        <div class="t-desc">
+                                            <p class="name">刘国东</p>
+                                            <p class="desc">企业财务管理顶尖实战专家</p>
+                                            <p class="desc">长财咨询董事长</p>
+                                            <p class="desc">优波资本执行合伙人</p>
+                                            <p class="desc">财务系统建设专家</p>
+                                        </div>
+                                        <img src="../src/image/t-share.png" alt="" class="share">
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination3 swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 今日长财 -->
+        <div class="news-box todys">
+            <div class="box-title">
+                <h2>今日长财</h2>
+                <a href="#">
+                    <img src="../src/image/showMore.png" alt="">
+                </a>
+            </div>
+            <!-- 今日长才分类 -->
+            <div class="cates">
+                <ul class="cate-group">
+                    <li class="cate c-red">精彩回放</li>
+                    <li class="cate">客户见证</li>
+                    <li class="cate">长财猎头</li>
+                    <li class="cate">研讨会信息</li>
+                </ul>
+            </div>
+            <!-- 此处代码每个模块对应一部分 需要全部遍历制作显示隐藏切换效果 志军注意-->
+            <!-- 精彩回放 -->
+            <div class="news-items tody ">
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 客户见证 -->
+            <div class="news-items tody hide">
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 长财猎头 -->
+            <div class="news-items tody hide">
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="">
+                        <img src="../src/image/news-log.png" alt="">
+                    </a>
+                    <div class="item-con">
+                        <a href="">
+                            <h5>珍藏！这6种专票超过认证起可以认证抵扣！</h5>
+                        </a>
+                        <p class="cont">长财咨询的业务遍及全国，截止2018年6月已设立分子公司40家子公司40家</p>
+                        <p class="date">2018.10.18</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 研讨会信息 -->
+            <div class="to-box tody hide">
+                <div class="swiper-container4 swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul class="items">
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul class="items">
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <ul class="items">
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                                <li class="item">
+                                    <h2 class="title">老板财务思维变革论坛</h2>
+                                    <p><span>讲师：</span><span>刘俊</span></p>
+                                    <p><span>时间：</span><span>12.15-16</span></p>
+                                    <p><span>地点：</span><span>杭州西湖区一号店黄龙体育馆c201</span></p>
+                                    <img src="../src/image/icon-pdf.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination4 swiper-pagination"></div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 分子公司 -->
+        <div class="guanyu comps">
+            <div class="box-title">
+                <h2>分子公司</h2>
+            </div>
+            <!-- 分子公司城市分类 -->
+            <div class="cates citys">
+                <ul class="cate-group ">
+                    <li class="cate c-red">北京</li>
+                    <li class="cate">天津</li>
+                    <li class="cate">山东</li>
+                    <li class="cate">青岛</li>
+                    <li class="cate">武汉</li>
+                </ul>
+                <!-- 更多城市按钮-->
+                <img src="../src/image/more-city.png" class="more-city"  alt="">
+            </div>
+            <div class="box maps-box">
+                <!-- 分子公司左边 -->
+                <div class="box-left maps">
+                    <div class="desc">长财咨询的业务遍及全国，截止2018年11月已设立分子公司50家，员工1000人以上，并成立华北、华东、华中、华南、东北、西北、成渝、山东、东南、西南10大区域技术咨询中心，可为各类客户提供各种财务、激励、商业运作的企业实战经验、工具、案例、技能辅导，帮助企业实现复制，打造赚钱到值钱的过程！</div>
+                    <div id="china-main"></div>
+                </div>
+                <!-- 分子公司轮播部分 -->
+                <div class="box-right">
+                    <img src="../src/image/coms.png" alt="">
+                    <div class="coms-desc">
+                        <h2>北京分公司</h2>
+                        <p>联系地址：北京市亦庄经济技术开发区6号201室</p>
+                        <p>联系方式：陈奕讯 18967105815</p>
+                    </div>
+                    <div class="lr-group">
+                        <img src="../src/image/l-btn.png" alt="">
+                        <img src="../src/image/r-btn.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 长财生态 -->
+        <div class="imgs-box">
+            <div class="box-title">
+                <h2>长财生态</h2>
+            </div>
+            <div class="box">
+                <img src="../src/image/Mask.png" alt="">
+            </div>
+        </div>
+        <!-- 合作企业 -->
+        <div class="imgs-box">
+            <div class="box-title">
+                <h2>合作企业</h2>
+            </div>
+            <div class="box" style="margin-top:80px;height: 365px;margin-bottom: 100px">
+                <img src="../src/image/hezuo.png" alt="">
+            </div>
+        </div>
+        <!-- 留言 -->
+        <div class="liuyan">
+            <div class="ly-box">
+                <h2>问题留言</h2>
+                <div class="heng3"></div>
+                <p>一次留言或许就是成就一个合作的开端</p>
+                <img src="../src/image/msg-index.png" class="msg" alt="">
+            </div>
+            <!-- 表单部分 -->
+            <div class="msg-form" id="msg-form">
+                <h2 class="title">填写您的信息</h2>
+                <form action="">
+                    <div class="input-group">
+                        <div class="labels">姓名</div>
+                        <input type="text" placeholder="请输入您的姓名" name="user_name">
+                    </div>
+                    <div class="input-group">
+                        <div class="labels">手机</div>
+                        <input type="text" placeholder="请输入手机号" name="mobile">
+                    </div>
+                    <div class="input-group">
+                        <div class="labels">城市</div>
+                        <input type="text" placeholder="请输入您的城市" name="city_name">
+                    </div>
+                    <div class="input-group">
+                        <div class="labels">问题</div>
+                        <input type="text" placeholder="输入您的问题描述" name="msg">
+                    </div>
+                </form>
+                <div class="btn send">发送</div>
+            </div>
+            <!-- 提交成功之后的样式 -->
+            <div class="success hide">
+                <img src="../src/image/send.png" alt="" class="send-img">
+                <p>您的需求已成功发送</p>
+                <p>我们将在72小时内与您取得联系</p>
+                <div class="sure">确定</div>
+            </div>
+        </div>

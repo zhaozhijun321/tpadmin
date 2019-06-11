@@ -1,0 +1,13 @@
+<?php
+//000000000000
+ exit();?>
+a:4:{i:0;a:22:{s:2:"id";i:59;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"李春佳";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FtviqkPZuYaC6Wwzxg2alEs-mf38.png";s:8:"keywords";s:6:"激励";s:11:"description";s:138:"企业激励系统高级导师
+长财咨询激励系统主讲老师
+企业股权激励系统落地教练
+企业源动力系统创始人";s:4:"tags";s:49:"大课主讲老师,激励系统技术服务中心";s:5:"weigh";i:59;s:5:"views";i:703;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1549109589;s:10:"updatetime";i:1553680088;s:11:"publishtime";i:1549036800;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:1;a:22:{s:2:"id";i:142;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"刘永湘";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FmMy9gPqABQnR4DV_XFY1K0wAvVv.png";s:8:"keywords";s:0:"";s:11:"description";s:97:"企业激励系统项目经理
+长财咨询激励系统咨询师
+企业激励系统项目经理";s:4:"tags";s:30:"激励系统技术服务中心";s:5:"weigh";i:142;s:5:"views";i:54;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550657814;s:10:"updatetime";i:1553674690;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:2;a:22:{s:2:"id";i:143;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"王海祥";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FuTiBwhcn8SYgYklh5rbxZ6O9ic6.png";s:8:"keywords";s:0:"";s:11:"description";s:91:"企业激励系统咨询师
+长财咨询激励系统建设专家
+企业流程再造专家";s:4:"tags";s:30:"激励系统技术服务中心";s:5:"weigh";i:143;s:5:"views";i:63;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550657883;s:10:"updatetime";i:1553674603;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:3;a:22:{s:2:"id";i:144;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"于韵泉";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fu7nOJaktVyKRWgquE-mDfseW2Xd.png";s:8:"keywords";s:0:"";s:11:"description";s:82:"企业机制绩效咨询师
+长财咨询激励系统咨询师
+团队训练导师";s:4:"tags";s:30:"激励系统技术服务中心";s:5:"weigh";i:144;s:5:"views";i:54;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550657933;s:10:"updatetime";i:1553674424;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}}

@@ -1,0 +1,11 @@
+<?php
+//000000000000
+ exit();?>
+a:4:{i:0;a:22:{s:2:"id";i:114;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"杨丽华";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FlcYl72W6l5SArd_L8-RCElxBz2_.png";s:8:"keywords";s:0:"";s:11:"description";s:103:"民企财务系统建设专家
+长财财务系统高级咨询师
+十多年财务实战与管理经验";s:4:"tags";s:27:"杨丽华技术服务中心";s:5:"weigh";i:114;s:5:"views";i:579;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550645407;s:10:"updatetime";i:1553679232;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:1;a:22:{s:2:"id";i:115;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"孙军乔";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FjZuvR1zjaxmPTnXPNPLQuxpXvnO.png";s:8:"keywords";s:0:"";s:11:"description";s:92:"长财财务系统高级咨询师
+原普华永道中天会计师事务所高级项目经理";s:4:"tags";s:27:"杨丽华技术服务中心";s:5:"weigh";i:115;s:5:"views";i:77;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550645479;s:10:"updatetime";i:1553679179;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:2;a:22:{s:2:"id";i:116;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"王小艳";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fm0oXRU16UyjQ2YO4gM0OkEm0rHX.png";s:8:"keywords";s:0:"";s:11:"description";s:133:"民营企业财务系统建设专家
+长财财务系统咨询师
+管在职于制造业、物流业、流通、医院等多个行业";s:4:"tags";s:27:"杨丽华技术服务中心";s:5:"weigh";i:116;s:5:"views";i:60;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550645617;s:10:"updatetime";i:1553679076;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:3;a:22:{s:2:"id";i:246;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:6:"黎伟";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190327/FjfkPpvqQ94HnrJxJV_J0NELrbob.png";s:8:"keywords";s:0:"";s:11:"description";s:120:"长财财务系统咨询师 
+注册会计师、税务师 
+十多年港股、A股上市公司财税管理工作经验  ";s:4:"tags";s:27:"杨丽华技术服务中心";s:5:"weigh";i:246;s:5:"views";i:88;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1553679019;s:10:"updatetime";i:1553679019;s:11:"publishtime";i:1553616000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}}

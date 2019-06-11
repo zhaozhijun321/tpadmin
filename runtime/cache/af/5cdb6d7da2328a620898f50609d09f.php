@@ -1,0 +1,11 @@
+<?php
+//000000000000
+ exit();?>
+a:3:{i:0;a:22:{s:2:"id";i:138;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"印正国";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Ftr3Nd1SfPEpMyrlnYy0LdZC25AL.png";s:8:"keywords";s:0:"";s:11:"description";s:88:"企业上市财务咨询专家
+长财财务系统高级咨询师
+中国注册会计师";s:4:"tags";s:27:"印正国技术服务中心";s:5:"weigh";i:138;s:5:"views";i:73;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550657257;s:10:"updatetime";i:1553675832;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:1;a:22:{s:2:"id";i:139;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:6:"周静";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fhfn7xsV0fmVgrkIa-jJVJQwCOR0.png";s:8:"keywords";s:0:"";s:11:"description";s:155:"长财财务系统咨询师
+高级会计师、中国注册会计师、ACCA、国际财务管理师
+曾任职于银行，会计师事务所、制造业等";s:4:"tags";s:27:"印正国技术服务中心";s:5:"weigh";i:139;s:5:"views";i:64;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550657439;s:10:"updatetime";i:1553675558;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:2;a:22:{s:2:"id";i:244;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:6:"乐燕";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190327/FjSfEMCl3yGj5hwcM8WDFPCTaoNp.png";s:8:"keywords";s:0:"";s:11:"description";s:81:"注册会计师，注册税务师
+注册资产评估师
+国际注册内审师
+";s:4:"tags";s:27:"印正国技术服务中心";s:5:"weigh";i:244;s:5:"views";i:65;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1553675224;s:10:"updatetime";i:1553675506;s:11:"publishtime";i:1553616000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}}

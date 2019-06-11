@@ -1,0 +1,12 @@
+<?php
+//000000000000
+ exit();?>
+a:4:{i:0;a:22:{s:2:"id";i:152;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:6:"方翀";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fvn3jpYgTpQOSnFR2m9JPn2_7sFo.png";s:8:"keywords";s:0:"";s:11:"description";s:88:"民营企业财税实战专家
+长财财务系统高级咨询师
+中国注册会计师";s:4:"tags";s:12:"销讲团队";s:5:"weigh";i:152;s:5:"views";i:66;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550658699;s:10:"updatetime";i:1553670732;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:1;a:22:{s:2:"id";i:153;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"姜咏梅";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FqFbZ_depF658D2IpXoa6AvjD3Wy.png";s:8:"keywords";s:0:"";s:11:"description";s:85:"民营企业财税实战专家
+长财财务系统咨询师
+澳洲会计师公会CPA";s:4:"tags";s:12:"销讲团队";s:5:"weigh";i:153;s:5:"views";i:57;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550658737;s:10:"updatetime";i:1553670658;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:2;a:22:{s:2:"id";i:154;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:6:"谢磊";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fg2z2d4ZzW2I26oJRUpNu0lX9CWi.png";s:8:"keywords";s:0:"";s:11:"description";s:106:"长财咨询高级财务讲师
+长财咨询财务咨询师、注册会计师
+十五年财务工作经验";s:4:"tags";s:27:"刘保谦技术服务中心";s:5:"weigh";i:154;s:5:"views";i:72;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550658793;s:10:"updatetime";i:1553670559;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:3;a:22:{s:2:"id";i:155;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"包颖贤";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FuXJA10d6_QrFGdl9Oe5V1Mf7438.png";s:8:"keywords";s:0:"";s:11:"description";s:97:"企业财务系统建设专家
+长财财务系统咨询师
+企业全面风险体系建设专家";s:4:"tags";s:12:"销讲团队";s:5:"weigh";i:155;s:5:"views";i:65;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550658832;s:10:"updatetime";i:1553669998;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}}

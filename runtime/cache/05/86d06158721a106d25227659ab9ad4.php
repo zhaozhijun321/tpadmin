@@ -1,0 +1,11 @@
+<?php
+//000000000000
+ exit();?>
+a:4:{i:0;a:22:{s:2:"id";i:129;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"董高仲";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FmxNoDVfErmRCCUGhjyLJWXBCrtR.png";s:8:"keywords";s:0:"";s:11:"description";s:96:"中国百强民企财务专家
+长财财务系统高级咨询师
+20年财务管理工作经验";s:4:"tags";s:27:"董高仲技术服务中心";s:5:"weigh";i:129;s:5:"views";i:81;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550655728;s:10:"updatetime";i:1550655728;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:1;a:22:{s:2:"id";i:130;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"王丽华";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FvY5pHzt6SfkxVn03qIRFq54BjTK.png";s:8:"keywords";s:0:"";s:11:"description";s:122:"资深老板财务顾问及咨询专家
+长财财务系统咨询师
+二十余年私营集团公司财务管理经验  ";s:4:"tags";s:27:"董高仲技术服务中心";s:5:"weigh";i:130;s:5:"views";i:78;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550655783;s:10:"updatetime";i:1553676718;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:2;a:22:{s:2:"id";i:131;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"岑代勇";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FudbLIE2hEmypfswOiVYhZOmSS8E.png";s:8:"keywords";s:0:"";s:11:"description";s:127:"长财财务系统咨询师
+中国注册会计师
+曾任大型会计师事务所高级项目经理、民营企业财务总监";s:4:"tags";s:27:"董高仲技术服务中心";s:5:"weigh";i:131;s:5:"views";i:68;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550655842;s:10:"updatetime";i:1553676620;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:3;a:22:{s:2:"id";i:245;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"吕金良";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190327/Fgdv_hhpwiOvjpOgiwx_Udtiy-G6.png";s:8:"keywords";s:0:"";s:11:"description";s:137:"注册会计师、注册税务师、美国注册管理会计师
+二十余年民企财务管理经验，曾担任多家企业财务总监";s:4:"tags";s:27:"董高仲技术服务中心";s:5:"weigh";i:245;s:5:"views";i:74;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1553676948;s:10:"updatetime";i:1553677300;s:11:"publishtime";i:1553616000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}}

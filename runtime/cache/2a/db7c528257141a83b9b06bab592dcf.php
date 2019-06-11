@@ -1,0 +1,16 @@
+<?php
+//000000000000
+ exit();?>
+a:4:{i:0;a:22:{s:2:"id";i:57;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"刘国东";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FjcAvsOjRliD91A--EU3WQIiiqds.png";s:8:"keywords";s:6:"财务";s:11:"description";s:108:"企业财务管理实战专家
+长财咨询董事长
+优波执行执行合伙人
+财务系统建设专家";s:4:"tags";s:18:"大课主讲老师";s:5:"weigh";i:57;s:5:"views";i:817;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1549108525;s:10:"updatetime";i:1553680208;s:11:"publishtime";i:1549036800;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:1;a:22:{s:2:"id";i:58;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"沈海涛";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/ForES0r-ojhRADNMyJBX7N33w1Xj.png";s:8:"keywords";s:6:"资本";s:11:"description";s:126:"长财咨询高级咨询师
+全球CEO创投俱乐部中国区主席
+长财资本通主讲老师
+长贝股权基金创始人";s:4:"tags";s:31:"大课主讲老师,资本中心";s:5:"weigh";i:58;s:5:"views";i:718;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1549109474;s:10:"updatetime";i:1553680150;s:11:"publishtime";i:1549036800;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:2;a:22:{s:2:"id";i:59;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"李春佳";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FtviqkPZuYaC6Wwzxg2alEs-mf38.png";s:8:"keywords";s:6:"激励";s:11:"description";s:138:"企业激励系统高级导师
+长财咨询激励系统主讲老师
+企业股权激励系统落地教练
+企业源动力系统创始人";s:4:"tags";s:49:"大课主讲老师,激励系统技术服务中心";s:5:"weigh";i:59;s:5:"views";i:704;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1549109589;s:10:"updatetime";i:1553680088;s:11:"publishtime";i:1549036800;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:3;a:22:{s:2:"id";i:60;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:6:"梁强";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fj-UFxA2CVfeTenu8f8xpPhe6J2X.png";s:8:"keywords";s:0:"";s:11:"description";s:123:"财务人才系统测评专家
+长猎猎头总经理
+财务人才数据库建设专家
+擅长发掘实战型财务高管";s:4:"tags";s:37:"大课主讲老师,长猎猎头团队";s:5:"weigh";i:60;s:5:"views";i:656;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1549109700;s:10:"updatetime";i:1555637766;s:11:"publishtime";i:1549036800;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}}

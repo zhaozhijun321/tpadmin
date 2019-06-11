@@ -1,0 +1,10 @@
+ <div class="form-group">
+        <div class="control-label col-xs-12 col-sm-2">选择产品</div>
+        <div class="col-xs-12 col-sm-8">
+            <select name="row[chanpin_id]" class="form-control selectpicker" data-rule="true" data-tip="{$item.tip}" {$item.extend} {$item.type=='selects'?'multiple':''}  id="chanpinid" data-live-search="true">
+            {foreach name="$chanpin_list" item="vo"}
+              <option value="{$vo['id']}" {in name="vo.id" value="$list.chanpin_id"}selected{/in}>{$vo.title}</option>
+            {/foreach}
+            </select>  
+        </div>
+    </div>

@@ -1,0 +1,606 @@
+{layout name="common/layout" /}
+        <!-- 首页大轮播图 -->
+        <div class="swiper-container swiper-container1">
+            <div class="swiper-wrapper">
+                {cms:blocklist id="block" name="focus" row="5" }
+                <div class="swiper-slide" onclick="location.href='{$block.url}'"><img src="{$block.image}">
+                     {// <div class="slide-desc"><h1>22222</h1> <!-- 修饰符 --><div class="heng"></div><p class="slide-content">1111111</p><a href="url" class="getMore">了解更多</a></div>}
+                </div>
+
+                {/cms:blocklist}
+
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination1 swiper-pagination"></div>
+        </div>
+        <!-- 最近新闻 -->
+        <div class="news-box">
+            {cms:channellist id="xinwen" cache="true" typeid="3"}
+            <div class="box-title" onclick="local('{$xinwen.url}')">
+                <h2 class="a-link">最近新闻</h2>
+                <a href="{$xinwen.url}">
+                    <img src="__ADDON__/src/image/more2.png" alt="">
+                </a>
+
+            </div>
+            {/cms:channellist}
+
+            <div class="news-items">
+                {cms:arclist id="new" channel="3,7,5,4" orderway="desc" orderby="publishtime" row="4"}
+                <div class="item">
+                    {$new.imglink}
+                    <div class="item-con">
+                        <a href="{$new.url}">
+                            <h5>{$new.title}</h5>
+                        </a>
+                        <p class="cont">{$new.description}</p>
+                        <p class="date">{:date('Y.m.d',$new.publishtime)}</p>
+                    </div>
+                </div>
+                {/cms:arclist}
+            </div>
+        </div>
+        <!-- 日历部分 -->
+        <div class="date-box">
+            {cms:channellist id="kecheng" cache="true" typeid="97"}
+
+            <div class="box-title">
+                <h2>长财咨询课程日历</h2>
+            </div>
+            {/cms:channellist}
+
+            <!-- 日历控件 -->
+            <div class="date-com">
+                <div id="cc_date" class="cc_date"></div>
+                <!-- 日历控件右侧详情 -->
+                <div class="date-cont">
+                    <!-- 当前是当天没有课程的样式 -->
+                   <!--  <div class="month-ke">
+                       
+                    </div> -->
+                   <!--  <div class="day-ke">
+                       
+                    </div> -->
+                    <?php
+                    
+                    $laydateint= new addons\cms\controller\Api;
+                
+                    echo  $laydateint->beginToday()['html'];
+                    ?>
+                </div>
+            </div>
+        </div>
+
+        <!-- 关于我们 -->
+        <div class="guanyu">
+            {cms:channellist id="guanyu" cache="true" typeid="73"}
+
+            <div class="box-title" onclick="local('{$guanyu.url}')">
+                <h2 class="a-link">关于长财</h2>
+                <a href="{$guanyu.url}">
+                    <img src="__ADDON__/src/image/more2.png" alt="">
+                </a>
+            </div>
+
+            <div class="box">
+                <!-- 关于我们左边 -->
+                <div class="box-left">
+                    <h2>长财咨询</h2>
+                    <div class="heng1"></div>
+
+                    <p class="cont">{$guanyu.description}</p>
+                  <!--   <a href="/cms/c/jianjie.html" target="_blank" class="get-more1">
+                        了解更多
+                        <img src="__ADDON__/src/image/more2.png" alt="">
+                    </a> -->
+                    <div class="get-more1"></div>  
+                    <ul>
+                        <li><p class="nums">100+</p><p class="txt">专家老师</p></li>
+                        <li><p class="nums">10000+</p><p class="txt">服务客户数量</p></li>
+                        <li><p class="nums">1000+</p><p class="txt">员工</p></li>
+                        <li><p class="nums">60+</p><p class="txt">分公司</p></li>
+                    </ul>
+                </div>
+
+                <!-- 视频部分 -->
+                <div class="box-right" id="video">
+                    
+                </div>
+            </div>
+            {/cms:channellist}
+
+        </div>
+        <!-- 产品与服务 -->
+        <div class="product">
+            <div class="p-box">
+                    {cms:channellist id="channel" cache="true" typeid="98"}
+
+                <div class="box-title" onclick="local('{$channel.url}')">
+                    <h2 class="a-link">产品与服务</h2>
+                    <a href="{$channel.url}">
+                        <img src="__ADDON__/src/image/more2.png" alt="">
+                    </a>
+                </div>
+                    {/cms:channellist}
+
+                <div class="swiper-container2 swiper-container">
+                    <div class="swiper-wrapper">
+                       {foreach name="chanpin" item="chanpinid"}
+                        <div class="swiper-slide ">
+                            <ul class="p-items">
+                            {foreach name="chanpinid" item="vo"}
+                                <li>
+                                    {$vo.img}
+                                    <div class="p-heng"></div>
+                                    <a href="{$vo.url}" class="liaojie">了解更多</a>
+                                </li>
+                                {/foreach}
+                       
+                            </ul>
+                        </div>
+                       {/foreach}
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination2 swiper-pagination">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 专家团队 -->
+        <div class="team">
+            <div class="t-box">
+                   {cms:channellist id="zhuajia" cache="true" typeid="63"}
+
+                <div class="box-title" onclick="local('{$zhuajia.url}')">
+                    <h2 class="a-link">专家团队</h2>
+                    <a href="{$zhuajia.url}">
+                        <img src="__ADDON__/src/image/more2.png" alt="">
+                    </a>
+                </div>
+                    {/cms:channellist}
+
+                <div class="swiper-container3 swiper-container">
+                    <div class="swiper-wrapper">
+                       {foreach name="zhuanjia" item="vo"}
+                        <div class="swiper-slide">
+                            <ul class="t-items">
+                                <?php $biaoqian=[]; ?>
+                               {foreach name="vo" item="v"}
+                                    <li>
+                                        <div class="t-imgs" onclick="local('{$v.url}')">
+                                        <!-- <a href="{$v.url}"> -->
+
+                                        {$v.img}
+                                        </div>
+
+                                        <div class="t-desc">
+                                            <p class="name">{$v.title}</p>
+                                            <?php $biaoqian = explode("\r\n",$v['description']);
+                                            for($i=0;$i<count($biaoqian);$i++){
+                                            ?>
+                                            <p class="desc">{$biaoqian[$i]}</p>
+                                            <?php
+                                            }
+                                             ?>
+                                           
+                                        </div>
+                                        <img src="__ADDON__/src/image/t-share.png" alt="    {$v.description}" class="share" data-url="{$v.url}" data-id="{$v.id}" >
+                                    </li>
+                                {/foreach}
+                            
+                            </ul>
+                        </div>
+                        {/foreach}
+                      
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <div class="swiper-pagination3 swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 今日长财 -->
+
+       <div class="news-box todys" style="background: #fff">
+            {cms:channellist id="jinri" cache="true" typeid="92"}
+            <div class="box-title" onclick="local('{$jinri.url}')">
+                <h2 class="a-link">今日长财</h2>
+                <a href="{$jinri.url}">
+                    <img src="__ADDON__/src/image/more2.png" alt="">
+                </a>
+            </div>
+            {/cms:channellist}
+
+            <!-- 今日长才分类 -->
+            <div class="cates">
+                <ul class="cate-group">
+                    {cms:channellist id="channel"  typeid="90"  type="son" orderway="asc" orderby="weigh"}
+                    
+                    <li class="cate {if condition='$key==0'} c-red {/if}">{$channel.name}</li>
+                    {/cms:channellist}
+                </ul>
+            </div>
+            <!-- 此处代码每个模块对应一部分 需要全部遍历制作显示隐藏切换效果 志军注意-->
+            <!-- 精彩回放 -->
+            <div class="news-items tody ">
+                {cms:arclist id="item" row="4" orderby="id" orderway="desc" orderby="publishtime" channel="92"}
+                <div class="item">
+                    <a href="{$item.url}">
+                        {$item.img}
+                    </a>
+                    <div class="item-con">
+                        <a href="{$item.url}">
+                            <h5>{$item.title}</h5>
+                        </a>
+                        <p class="cont">{$item.description}</p>
+                        <p class="date">{:date('Y.m.d',$item.publishtime)}</p>
+                    </div>
+                </div>
+                {/cms:arclist}
+            </div>
+            <!-- 客户见证 -->
+            <div class="news-items tody hide">
+                 {cms:arclist id="item" row="4" orderby="id" orderway="desc" orderby="publishtime" channel="93"}
+                <div class="item">
+                    <a href="{$item.url}">
+                       {$item.img}
+                    </a>
+                    <div class="item-con">
+                        <a href="{$item.url}">
+                            <h5>{$item.title}</h5>
+                        </a>
+                        <p class="cont">{$item.description}</p>
+                        <p class="date">{:date('Y.m.d',$item.publishtime)}</p>
+                    </div>
+                </div>
+                {/cms:arclist}
+            </div>
+            <!-- 长财猎头 -->
+          <!--  <div class="news-items tody hide">
+                {cms:arclist id="lietou" row="4" orderby="id" orderway="desc" channel="94"}
+                <div class="item">
+                    <a href="{$lietou.url}">
+                       {$lietou.img}
+                    </a>
+                    <div class="item-con">
+                        <a href="{$lietou.url}">
+                            <h5>{$lietou.title}</h5>
+                        </a>
+                        <p class="cont">{$lietou.description}</p>
+                        <p class="date">{:date('Y.m.d',$lietou.publishtime)}</p>
+                    </div>
+                </div>
+                {/cms:arclist}
+            </div> -->
+            <!-- 研讨会信息 -->
+            <div class="to-box tody hide">
+                  <!--   <div class="swiper-container4 swiper-container">
+                    <div class="swiper-wrapper"> -->
+                        <!-- <div class="swiper-slide"> -->
+                            <ul class="items">
+                                {foreach name="yantaohuis" item="yantaohui"}
+                                <li class="item" onclick="local('{$yantaohui->channel->url}')">
+                                    <h2 class="title">
+                                        {$yantaohui->chanpin->title}
+                                       </h2>
+                                    <p><span>讲师： </span><span>{if condition="!empty($yantaohui->archives)"}{foreach name="$yantaohui->archives" item="laoshi"}{$laoshi->title}&nbsp;{/foreach}{/if}</span></p>
+                                    <p><span>时间：</span><span>{:date('m.d',strtotime($yantaohui->begintime))}-{:date('d',strtotime($yantaohui.endtime))}</span></p>
+                                    <p class="address"><span>地点：</span><span>{:strip_tags($yantaohui->area)}</span></p>
+                                   {if condition="$yantaohui->qitafile"}
+                                    <img src="__ADDON__/src/image/icon-pdf.png" alt="" class="download" data-id={$yantaohui.id}>
+                                    {/if}
+                                
+                                </li>
+                                {/foreach}
+
+                            </ul>
+                        <!-- </div> -->
+                    <!-- 如果需要分页器 -->
+             <!--        <div class="swiper-pagination4 swiper-pagination"></div> -->
+                <!-- </div> -->
+            </div>
+            
+        </div>
+        <!-- 分子公司 -->
+        <div class="guanyu comps">
+            <div class="box-title">
+                <h2>分子公司</h2>
+            </div>
+            <!-- 分子公司城市分类 -->
+            <div class="cates citys">
+                <ul class="cate-group ">
+                    {if condition="$zifen"}
+                    {volist name="zifen" id="vo" offset="0" length="5"}
+                    <li class="cate {if condition="$key==0"}c-red{/if}" {if condition="$key==0" }data-sheng='{$firstsheng[shortName]}'{/if}data-item="{$vo.id}">{$vo.shortName}</li>
+                    {/volist}
+                    {/if}
+                </ul>
+                <!-- 更多城市按钮-->
+                <img src="__ADDON__/src/image/more-city.png" class="more-city"  alt="">
+            </div>
+            <div class="box maps-box">
+                <!-- 分子公司左边 -->
+                <div class="box-left maps">
+                    <div class="desc">长财咨询的业务遍及全国，截止2018年11月已设立分子公司50家，员工1000人以上，并成立华北、华东、华中、华南、东北、西北、成渝、山东、东南、西南10大区域技术咨询中心，可为各类客户提供各种财务、激励、商业运作的企业实战经验、工具、案例、技能辅导，帮助企业实现复制，打造赚钱到值钱的过程！</div>
+                    <div id="china-main"></div>
+                </div>
+                <!-- 分子公司轮播部分 -->
+                <div class="box-right">
+                    <div class="swiper-container swiper-container-com">
+                       <!--  <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="__ADDON__/src/image/coms.png" alt="">
+                                <div class="coms-desc">
+                                <h2>北京分公司1</h2>
+                                <p>联系地址：北京市亦庄经济技术开发区6号201室</p >
+                                <p>联系方式：陈奕讯 18967105815</p >
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- 轮播图左右点击按钮 -->
+                       <!--  <div class="lr-group">
+                            <img src="__ADDON__/src/image/l-btn.png" alt="" class="b-left">
+                            <img src="__ADDON__/src/image/r-btn.png" alt="" class="b-right">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 合作企业 -->
+        <div class="imgs-box">
+            <div class="box-title">
+                <h2>合作企业</h2>
+            </div>
+            <div class="box" style="margin-top:80px;height: 365px;margin-bottom: 100px">
+                {cms:blocklist id="hezuoqiye"  name="hezuoqiye"}
+                <img src="{$hezuoqiye.image}" alt="">
+                {/cms:blocklist}
+            </div>
+        </div>
+        <!-- 留言 -->
+        <div class="liuyan">
+            <div class="ly-box">
+                <h2>问题留言</h2>
+                <div class="heng3"></div>
+                <p>一次留言或许就是成就一个合作的开端</p>
+                <img src="__ADDON__/src/image/msg-index.png" class="msg" alt="">
+            </div>
+            <!-- 表单部分 -->
+            <div class="msg-form" id="msg-form">
+                <h2 class="title">填写您的信息</h2>
+                <form id="new-form" method="post" action="{:addon_url('cms/diyform/post')}">
+                    {:token()}
+                    {php}echo $diyform['fieldslist']{/php}
+                    
+                </form>
+                <div class="btn send">发送</div>
+            </div>
+            <!-- 提交成功之后的样式 -->
+            <div class="success hide">
+                <img src="__ADDON__/src/image/send.png" alt="" class="send-img">
+                <p>您的需求已成功发送</p>
+                <p>我们将在72小时内与您取得联系</p>
+                <div class="sure">确定</div>
+            </div>
+        </div>
+          
+    <!-- 更多城市弹窗 -->
+    <div class="share-modal hide" id="cityModal" >
+        <div class="modal-box" style="height: 372px">
+            <div class="box citys-box">
+                <h2>选择城市</h2>
+                <ul class="cate-group1">
+
+                    <!-- <li class="cate1 city-item c-red">北京</li> -->
+                    {if condition="$zifen"}
+                    {foreach name="zifen" item="vo"}
+                    <li class="cate1 city-item" data-item="{$vo.id}">{$vo.shortName}</li>
+                    {/foreach}
+                   {/if}
+                </ul>
+                <img src="__ADDON__/src/image/close.png" class="c-close">
+            </div>
+        </div>
+    </div>
+    <!-- 回到顶部按钮 -->
+    <div class="back-top hide">
+        <img src="__ADDON__/src/image/back-top.png" alt="">
+    </div>
+ <script src="__CDN__/assets/js/echarts.min.js?v={cms:config name='site.version'/}"></script>
+ <script src="__ADDON__/src/echarts/china.js"></script>
+ <script src="__CDN__/assets/addons/ckplayer/ckplayer/ckplayer.min.js"></script>
+<script>
+    <?php
+
+   echo $laydateint->beginToday()['jsonhtml'];
+   echo $laydateint->getLocation('','china-main')['eachart'];
+  unset($laydateint);
+    ?>
+     $('.c-close').click(function () {
+        $('#cityModal').fadeOut();
+    })
+       window.onload=function(){
+        //获取第一个城市数据
+        var dataid =$('.citys .c-red').attr('data-item')
+        //请求密钥
+         $.ajax({
+            url: '/addons/cms/api/getMoresclice',
+            type: 'POST',
+            data: {dataid:dataid},
+            dataType: 'json',
+            success: function (json) {
+                if(json){
+                    if(json.item.length>0){
+                        var str='<div class="swiper-wrapper">';
+                         for(var i=0;i<json.item.length;i++){
+                            str+='<div class="swiper-slide"><a href='+json.item[i].url+'><img src="'+json.item[i].image+'" alt=""></a><div class="coms-desc"><h2>'+json.item[i].title+'</h2><p>联系地址：'+json.item[i].detailsArea+'</p ><p>联系方式：'+json.item[i].contact_way+'</p ></div></div>'
+                        }
+                        str+='</div><div class="lr-group"><img src="/assets/addons/cms/src/image/l-btn.png" alt="" class="b-left"><img src="/assets/addons/cms/src/image/r-btn.png" alt="" class="b-right"></div>';
+                        $('.swiper-container-com').html(str);
+                        //duiyingchengshi 添加选中类
+                        $('li[data-item='+dataid+']').addClass('c-red').siblings().removeClass('c-red')
+                         mySwiperCom = new Swiper ('.swiper-container-com', {
+                            loop: true, // 循环模式选项
+                            autoplay:{
+                            disableOnInteraction : false,
+                            delay:5000
+                            }, // 自动播放
+                            navigation: {
+                            nextEl: '.b-right',
+                            prevEl: '.b-left',
+                            },
+                        })
+                    }else{
+                        return false
+                    }
+
+                }else{
+                    alert('出错了！')
+                }
+            },
+            error: function () {
+                alert('刷新页面重试')
+
+            }
+        });
+        return false;
+       
+    }
+  var citys = $('.citys>ul>.c-red').attr('data-sheng');
+  var optionMap = {
+        title : {
+            text: '',
+            subtext: '',
+            left: 'center',
+            top: 'top',
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        
+        tooltip: {},
+        
+        backgroundColor: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 1,
+            y2: 1,
+            colorStops: [{
+                offset: 0, color: '#fff' // 0% 处的颜色
+            }, {
+                offset: 1, color: '#fff' // 100% 处的颜色
+            }],
+            globalCoord: false // 缺省为 false
+        },
+        series: [
+            {
+                type: 'map',
+                map: 'china',
+                geoIndex: 2,
+                aspectScale: 0.75, //长宽比
+                showLegendSymbol: true, // 存在legend时显示
+                label: {
+                    normal: {
+                        show: false,
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                roam: false,
+                itemStyle: {
+                    normal: {
+                        areaColor: '#D9D9D9',
+                        borderColor: '#CCC6C2',
+                        borderWidth: 1
+                    },
+                    emphasis: {
+                        areaColor: '#D21F20'
+                    }
+                },
+                data:[
+                    {name:citys,selected:true }
+                ]
+            },
+        ]
+    };
+   
+     //初始化echarts实例
+    var myChart = echarts.init(document.getElementById('china-main'));
+
+    //使用制定的配置项和数据显示图表
+    myChart.setOption(optionMap);
+    // 点击地图切换右边分公司数据
+    myChart.on('click', function(params){
+        console.log(params);//此处写点击事件内容
+        var  name = params.name;
+       
+        // 未完待续
+         $.ajax({
+            url: '/addons/cms/api/getMoresclice',
+            type: 'POST',
+            data: {prvice:name},
+            dataType: 'json',
+            success: function (json) {
+                // obj.removeAttr("disabled");
+                if(json){
+                    if(json.item.length>0){
+                         myChart.setOption({
+                            series:[{data:[{name:name,selected:true}]}]
+                        })
+                        var str='<div class="swiper-wrapper">';
+                        for(var i=0;i<json.item.length;i++){
+                            str+='<div class="swiper-slide"><a href='+json.item[i].url+'><img src="'+json.item[i].image+'" alt=""></a><div class="coms-desc"><h2>'+json.item[i].title+'</h2><p>联系地址：'+json.item[i].detailsArea+'</p ><p>联系方式：'+json.item[i].contact_way+'</p ></div></div>'
+                        }
+                        str+='</div><div class="lr-group"><img src="/assets/addons/cms/src/image/l-btn.png" alt="" class="b-left"><img src="/assets/addons/cms/src/image/r-btn.png" alt="" class="b-right"></div>';
+                        $('.swiper-container-com').html(str);
+                        //duiyingchengshi 添加选中类
+                        $('li[data-item='+json.shi+']').addClass('c-red').siblings().removeClass('c-red')
+                         mySwiperCom = new Swiper ('.swiper-container-com', {
+                            loop: true, // 循环模式选项
+                            autoplay:{
+                            disableOnInteraction : false,
+                            delay:5000
+                            }, // 自动播放
+                            navigation: {
+                            nextEl: '.b-right',
+                            prevEl: '.b-left',
+                            },
+                        })
+                    }else{
+                        return false
+                    }
+
+                }else{
+                    alert('出错了！')
+                }
+            },
+            error: function () {
+                btn.removeAttr("disabled");
+                alert('刷新页面重试')
+
+            }
+        });
+        return false;
+    })
+   
+    {cms:blocklist id="video"  name="video"}
+    var videocontent ='{:cdnurl($video.url)}' 
+    var videoimg ='{$video.image}' 
+    {/cms:blocklist}
+    //视频播放
+   var videoObject = {
+        container: '#video',//“#”代表容器的ID，“.”或“”代表容器的class
+        variable: 'player',//该属性必需设置，值等于下面的new chplayer()的对象
+        flashplayer:false,//如果强制使用flashplayer则设置成true
+        video:videocontent,//视频地址
+        poster: videoimg,
+        autoplay: false,//是否自动播放
+    };
+    var player=new ckplayer(videoObject);
+</script>

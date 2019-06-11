@@ -1,0 +1,68 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <div class="control-label col-xs-12 col-sm-2">选择发布栏目</div>
+        <div class="col-xs-12 col-sm-8">
+            <select name="row[channel_id]" class="form-control selectpicker" data-rule="true" data-tip="{$item.tip}" {$item.extend} {$item.type=='selects'?'multiple':''}  id="channel_id" >
+            {foreach name="$channel_list" item="vo"}
+              <option value="{$vo['id']}" {in name="vo.id" value="$item.value"}selected{/in}>{$vo.name}</option>
+            {/foreach}
+            </select>  
+        </div>
+    </div>
+    <div id="extend"></div>
+    <div class="form-group">
+        <label for="c-flag" class="control-label col-xs-12 col-sm-2">{:__('选择专家')}:</label>
+        <div class="col-xs-12 col-sm-8">
+        {:build_select('expertsid[]', $groupdata, $groupids, ['class'=>'form-control selectpicker', 'multiple'=>'', 'data-rule'=>'required'])}
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="control-label col-xs-12 col-sm-2">附件</div>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+            <input id="c-qitafile" class="form-control" name="row[qitafile]" type="text" value="{$item.value}" data-rule="{$item.rule}" data-tip="{$item.tip}">
+            <div class="input-group-addon no-border no-padding">
+                <span><button type="button" id="plupload-qitafile" class="btn btn-danger plupload" data-input-id="c-qitafile" data-multiple="false" {if $item.maximum}data-maxcount="{$item.maximum}"{/if}><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                <span><button type="button" id="fachoose-qitafile" class="btn btn-primary fachoose" data-input-id="c-{$item.name}" data-multiple="false" {if $item.maximum} data-maxcount="{$item.maximum}"{/if}><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+            </div>
+            <span class="msg-box n-right" for="c-{$item.name}"></span>
+            </div>
+        </div>
+    </div>
+     <div class="form-group">
+        <div class="control-label col-xs-12 col-sm-2">开始时间</div>
+        <div class="col-xs-12 col-sm-8">
+             <input type="text" name="row[begintime]" id="c-begintime" value="{$item.value}" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-tip="{$item.tip}" data-rule="{$item.rule}" {$item.extend} />
+        </div>
+    </div>
+     <div class="form-group">
+        <div class="control-label col-xs-12 col-sm-2">结束时间</div>
+        <div class="col-xs-12 col-sm-8">
+            <input type="text" name="row[endtime]" id="c-endtime" value="{$item.value}" class="form-control datetimepicker" data-date-format="YYYY-MM-DD" data-tip="{$item.tip}" data-rule="{$item.rule}" {$item.extend} />
+        </div>
+    </div>
+     <div class="form-group">
+        <div class="control-label col-xs-12 col-sm-2">地点</div>
+        <div class="col-xs-12 col-sm-8">
+            <textarea name="row[area]" id="c-didian" class="form-control editor" data-rule="{$item.rule}" rows="5" data-tip="{$item.tip}" {$item.extend}>{$item.value}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <select  id="c-status" class="form-control selectpicker" name="row[status]">
+                {foreach name="statusList" item="vo"}
+                <option value="{$key}" {in name="key" value=""}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

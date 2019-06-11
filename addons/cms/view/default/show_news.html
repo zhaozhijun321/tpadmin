@@ -1,0 +1,42 @@
+{layout name="common/layout" /}
+ <link rel="stylesheet" href="__ADDON__/css/details.css?v={cms:config name='site.version'/}">
+<div class="n-detail">
+    <!-- 左侧标准详情盒子部分 -->
+    <div class="n-box-left">
+        <!-- 详情标题 -->
+        <h2>{$__ARCHIVES__->title}</h2>
+        <div class="shares">
+            <p class="time">{:date('Y.m.d',$__ARCHIVES__->publishtime)}</p>
+            <p class="label">{$__CHANNEL__->name}</p>
+            <img src="__ADDON__/src/image/t-share.png" alt="" class="share" data-id="{$__ARCHIVES__->id}">
+        </div>
+        <div class="detail-cont">
+            <!-- 只是为了样式,详情正文不用放在P标签中 -->
+            <p>{cms:archives name="content" /}</p>
+        </div>
+    </div>
+
+    <!-- 右侧根据实际详情页选择相对应的样式 -->
+    <!-- 右侧根据实际详情页选择相对应的样式 -->
+    <!-- 右侧根据实际详情页选择相对应的样式 -->
+     <!-- 推荐新闻 -->
+    <div class="n-box-right">
+        <h2>推荐{$__CHANNEL__->name}</h2>
+        <!-- 右侧分类集合 -->
+        <div class="r-items">
+            <!-- 右侧小分类 -->
+            {cms:arclist id="item" row="8" flag="recommend|hot" orderby="weigh" orderway="asc" channel="$__CHANNEL__->id"}
+            {if condition="$item.id==$__ARCHIVES__->id"}
+            {else/}
+            <a href="{$item.url}">
+                <div class="item">
+                  {$item.img}
+                    <p>{$item.title}</p>
+                </div>
+            </a>
+            {/if}
+            {/cms:arclist}
+        </div>
+    </div>
+    
+</div>

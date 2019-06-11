@@ -1,0 +1,107 @@
+    {layout name="common/layout" /}
+    <link rel="stylesheet" href="__ADDON__/css/about.css?v={cms:config name='site.version'/}">
+       {include file="common/guanyu_list"}
+     
+        <!-- 长财业务 -->
+        <div class="imgs-box  nav-item">
+            <div class="box">
+                <p>公司业务：财税整体解决方案咨询、财税专项咨询、激励系统整体解决方案咨询、专项咨询、企业商业咨询。</p>
+                <img style="margin:30px 0" src="__ADDON__/src/image/Mask.png" alt="">
+                <p>长财咨询全国滚动开设《财务系统班》，《激励系统班》集中咨询式方案班。以及《财务通》《管理层财务思维》，《资本通》等精品课程和大量陪伴计划课程。</p>
+                <img style="margin:30px 0" src="__ADDON__/src/image/tixi.png" alt="">
+                <p>旗下长猎公司负责为企业提供中高端猎头服务。<br> 长财咨询为企业提供从财务，税务，股权，绩效，薪酬，品牌，定位，商业模式咨询到资本投资，资本融资，企业上市等全方位的咨询服务。帮助企业管理升级，陪伴企业一起成长！</p>
+            </div>
+        </div>
+       
+
+        <script>
+  // 点击大分类进行切换数据
+            $('.g-nav').click(function () {
+                console.log(1111)
+                let index = $(this).index();
+                
+                $(this).addClass('c-red').siblings('.g-nav').removeClass('c-red');
+                $('.nav-item').eq(index).show().siblings('.nav-item').hide();
+                if (index == 2) { //当前点击的索引为2显示地图样式
+                    initMap();
+                }
+            })
+             // 设置初始化的地图方法，当点击分子公司的时候再去加载
+            function initMap() {
+                var optionMap = {
+                    title : {
+                        text: '',
+                        subtext: '',
+                        left: 'center',
+                        top: 'top',
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    },
+                    
+                    tooltip: {},
+                    
+                    backgroundColor: {
+                        type: 'linear',
+                        x: 0,
+                        y: 0,
+                        x2: 1,
+                        y2: 1,
+                        colorStops: [{
+                            offset: 0, color: '#fff' // 0% 处的颜色
+                        }, {
+                            offset: 1, color: '#fff' // 100% 处的颜色
+                        }],
+                        globalCoord: false // 缺省为 false
+                    },
+                    series: [
+                        {
+                            type: 'map',
+                            map: 'china',
+                            geoIndex: 2,
+                            aspectScale: 0.75, //长宽比
+                            showLegendSymbol: true, // 存在legend时显示
+                            label: {
+                                normal: {
+                                    show: false,
+                                },
+                                emphasis: {
+                                    show: true,
+                                    textStyle: {
+                                        color: '#fff'
+                                    }
+                                }
+                            },
+                            roam: false,
+                            itemStyle: {
+                                normal: {
+                                    areaColor: '#D9D9D9',
+                                    borderColor: '#CCC6C2',
+                                    borderWidth: 1
+                                },
+                                emphasis: {
+                                    areaColor: '#D21F20'
+                                }
+                            },
+                            data:[
+                                {name: '北京',selected:true }
+                            ]
+                        },
+                    ]
+                };
+                //初始化echarts实例
+                var myChart = echarts.init(document.getElementById('china-main'));
+
+                //使用制定的配置项和数据显示图表
+                myChart.setOption(optionMap);
+                // 点击地图切换右边分公司数据
+                myChart.on('click', function(params){
+                    console.log(params);//此处写点击事件内容
+                    let name = params.name;
+                    this.setOption({
+                        series:[{data:[{name:name,selected:true}]}]
+                    })
+                    // 未完待续
+                })
+            }
+</script>

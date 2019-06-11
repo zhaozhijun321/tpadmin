@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration-line: none;
+    color: #000000;
+}
+li {
+    list-style: none;
+}
+/* 控制隐藏 */
+.hide{
+    display: none
+}
+/* 整体红色样式 */
+.c-red {
+    color: #D21F20;
+}
+/* 共用底部样式 */
+    .com-bottom{
+        width:100%;
+        background: #333333;
+        font-size: 14px;
+    }
+    .com-bottom .bot-copy {
+        width: 100%;
+        border-top: 1px solid #404040;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        color: #666666;
+    }
+    .com-bottom .bot-box {
+        width: 1100px;
+        height: 306px;
+        margin: 0 auto;        
+        display: flex;
+        position: relative;
+    }
+    .com-bottom .bot-box ul {
+        flex:1;
+        padding-right: 100px;
+        box-sizing: border-box;
+        padding: 50px 100px 50px 0;
+    }
+    .com-bottom .bot-box ul .title{
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    .com-bottom .bot-box ul .detail-name {
+        margin-bottom: 20px;
+        display: inline-block;
+        margin-right: 50px;
+        line-height: 20px;
+    }
+    .com-bottom .bot-box ul .detail-name a {
+        color: #B3B3B3;
+        font-size: 14px;
+    }
+    .com-bottom .bot-box ul a .bot-weibo {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-top: -10px;
+    }
+    .com-bottom .bot-box .bot-weixin {
+        position: absolute;
+        width: 100px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        top:0;
+        right: 0;
+    }
+    .com-bottom .bot-box .bot-weixin img {
+        width: 100%;
+        height: 100px;
+        display: block;
+    }
+/* 公用底部样式结束 */
+
+
+/* 顶部导航样式开始 */
+    .t-navs {
+        width: 100%;
+        height: 80px;
+        display: flex;
+    }
+    .t-navs>a {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin-left: 50px;
+        width: 185px;
+    }
+    .t-navs>a img{
+        width: 185px;
+        height: 39px;
+    }
+    .t-navs .navs-con {
+        margin-right: 45px;
+        height: 100%;
+        margin-left: auto;
+        display: flex;
+    }
+    .t-navs .navs-con li{
+        list-style: none;
+        line-height: 80px;
+        font-size: 14px;
+        width: 100px;
+        text-align: center;
+        position: relative;
+        /* margin-left: 10px; */
+        /* font-weight: bold; */ 
+    }
+    .t-navs .navs-con li:hover a {
+        color: #D21F20;
+    }
+    .t-navs .navs-con .unders::after{
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #D21F20;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        /* transition: all .3s; */
+    }
+    /* .t-navs .navs-con li:after{
+        content: "";
+        width: 0;
+        height: 2px;
+        background: #D21F20;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transition: all .3s;
+    }
+    .t-navs .navs-con li:hover:after{
+        left: 0%;
+        width: 100%;
+    } */
+    .t-navs .navs-con .phones {
+        height: 100%;
+        line-height: 70px;
+        align-items: center;
+        display: flex;
+        margin-left: 45px;
+    }
+    .t-navs .navs-con .phones img{
+        margin-right: 8px;
+        width: 20px;
+        height: 20px;
+    }
+/* 顶部导航样式结束 */
+
+

@@ -1,0 +1,36 @@
+ {layout name="common/layout" /}
+<link rel="stylesheet" href="__ADDON__/css/product.css?v={cms:config name='site.version'/}">
+<style type="text/css">
+    body{
+        background: #f5f5f5;
+    }
+        </style>
+         <!-- <div class="box-title" style="margin-top: 50px">
+                <h2>{cms:channel name="name" /}</h2>
+            </div> -->
+ <div class="cont-box">
+           
+             <ul class="team-cate">
+                <li class="t-cate  c-red" data-id="all">全部</li>
+                 {cms:channellist id="channel" type="son" orderway="asc" ordery="weigh" typeid="$__CHANNEL__.id"}
+               <li class="t-cate" data-id="{$channel.id}"><a href="{$channel.url}">{$channel.name}</a></li>
+                {/cms:channellist}
+                
+
+            </ul>
+            <div class="conts" style="margin-top: 50px">
+              <!--   <p class="title">{cms:channel name="description" /}</p> -->
+              {php}$children =\addons\cms\model\Channel::where('parent_id',$__CHANNEL__->id)->column('id');$chidstr = implode(',',$children);{/php}
+                <ul class="p-items">
+                    {cms:arclist id="item"  orderby="weigh" orderway="asc" channel="$chidstr"}
+                    <li>
+                       {$item.img}
+                        <div class="p-heng"></div>
+                        <a href="{$item.url}" class="liaojie">了解更多</a>
+                    </li>
+                    {/cms:arclist}
+                </ul>
+            </div>
+            
+        </div>
+       

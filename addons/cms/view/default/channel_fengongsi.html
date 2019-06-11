@@ -1,0 +1,227 @@
+    {layout name="common/layout" /}
+    <link rel="stylesheet" href="__ADDON__/css/about.css?v={cms:config name='site.version'/}">
+       {include file="common/guanyu_list"}
+        <!-- 分子公司 -->
+        <div class="guanyu comps  nav-item">
+            <!-- 分子公司城市分类 -->
+            <div class="cates citys">
+                <ul class="cate-group ">
+                   {php} $zifen = db('cms_addonchildren')->alias('a')->join('fa_location b','a.city_id=b.id')->join('fa_cms_archives c','c.id=a.id')->field('b.shortName,b.id,a.province_id,c.deletetime')->group('a.city_id')->order('b.id asc')->where("c.deletetime",'null')->cache(true)->select();  //获取第一个城市的省名称
+        $firstsheng = db('location')->where("level=1")->where('id',$zifen[0]['province_id'])->find();{/php}
+                    {if condition="$zifen"}
+                    {volist name="zifen" id="vo" offset="0" length="5"}
+                    <li class="cate {if condition="$key==0"}c-red{/if}" data-item="{$vo.id}" {if condition="$key==0" }data-sheng='{$firstsheng[shortName]}'{/if}>{$vo.shortName}</li>
+                    {/volist}
+                    {/if}
+                </ul>
+                <!-- 更多城市按钮-->
+                <img src="__ADDON__/src/image/more-city.png" class="more-city"  alt="">
+            </div>
+            <div class="box maps-box">
+                <!-- 分子公司左边 -->
+                <div class="box-left maps">
+                    <div class="desc">长财咨询的业务遍及全国，截止2018年11月已设立分子公司50家，员工1000人以上，并成立华北、华东、华中、华南、东北、西北、成渝、山东、东南、西南10大区域技术咨询中心，可为各类客户提供各种财务、激励、商业运作的企业实战经验、工具、案例、技能辅导，帮助企业实现复制，打造赚钱到值钱的过程！</div>
+                    <div id="china-main"></div>
+                </div>
+                <!-- 分子公司轮播部分 -->
+                <div class="box-right">
+                    <div class="swiper-container swiper-container-com">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- 更多城市弹窗 -->
+        <div class="share-modal hide" id="cityModal" >
+            <div class="modal-box" style="height: 372px">
+                <div class="box citys-box">
+                    <h2>选择城市</h2>
+                    <ul class="cate-group1">
+
+                        <!-- <li class="cate1 city-item c-red">北京</li> -->
+                        {if condition="$zifen"}
+                        {foreach name="zifen" item="vo"}
+                        <li class="cate1 city-item" data-item="{$vo.id}">{$vo.shortName}</li>
+                        {/foreach}
+                       {/if}
+                    </ul>
+                    <img src="__ADDON__/src/image/close.png" class="c-close">
+                </div>
+            </div>
+        </div>
+        <script src="__CDN__/assets/js/echarts.min.js?v={cms:config name='site.version'/}"></script>
+        <script src="__ADDON__/src/echarts/china.js"></script>
+        <script>
+      $('.c-close').click(function () {
+        $('#cityModal').fadeOut();
+    })
+   window.onload=function(){
+        //获取第一个城市数据
+        var dataid =$('.citys .c-red').attr('data-item')
+        //请求密钥
+         $.ajax({
+            url: '/addons/cms/api/getMoresclice',
+            type: 'POST',
+            data: {dataid:dataid},
+            dataType: 'json',
+            success: function (json) {
+                if(json){
+                    if(json.item.length>0){
+                        var str='<div class="swiper-wrapper">';
+                         for(var i=0;i<json.item.length;i++){
+                            str+='<div class="swiper-slide"><a href='+json.item[i].url+'><img src="'+json.item[i].image+'" alt=""></a><div class="coms-desc"><h2>'+json.item[i].title+'</h2><p>联系地址：'+json.item[i].detailsArea+'</p ><p>联系方式：'+json.item[i].contact_way+'</p ></div></div>'
+                        }
+                        str+='</div><div class="lr-group"><img src="/assets/addons/cms/src/image/l-btn.png" alt="" class="b-left"><img src="/assets/addons/cms/src/image/r-btn.png" alt="" class="b-right"></div>';
+                        $('.swiper-container-com').html(str);
+                        //duiyingchengshi 添加选中类
+                        $('li[data-item='+dataid+']').addClass('c-red').siblings().removeClass('c-red')
+                         mySwiperCom = new Swiper ('.swiper-container-com', {
+                            loop: true, // 循环模式选项
+                            autoplay:{
+                            disableOnInteraction : false,
+                            delay:5000
+                            }, // 自动播放
+                            navigation: {
+                            nextEl: '.b-right',
+                            prevEl: '.b-left',
+                            },
+                        })
+                    }else{
+                        return false
+                    }
+
+                }else{
+                    alert('出错了！')
+                }
+            },
+            error: function () {
+                alert('刷新页面重试')
+
+            }
+        });
+        return false;
+       
+    }
+     var citys = $('.citys>ul>.c-red').attr('data-sheng');
+  var optionMap = {
+        title : {
+            text: '',
+            subtext: '',
+            left: 'center',
+            top: 'top',
+            textStyle: {
+                color: '#fff'
+            }
+        },
+        
+        tooltip: {},
+        
+        backgroundColor: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 1,
+            y2: 1,
+            colorStops: [{
+                offset: 0, color: '#fff' // 0% 处的颜色
+            }, {
+                offset: 1, color: '#fff' // 100% 处的颜色
+            }],
+            globalCoord: false // 缺省为 false
+        },
+        series: [
+            {
+                type: 'map',
+                map: 'china',
+                geoIndex: 2,
+                aspectScale: 0.75, //长宽比
+                showLegendSymbol: true, // 存在legend时显示
+                label: {
+                    normal: {
+                        show: false,
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                roam: false,
+                itemStyle: {
+                    normal: {
+                        areaColor: '#D9D9D9',
+                        borderColor: '#CCC6C2',
+                        borderWidth: 1
+                    },
+                    emphasis: {
+                        areaColor: '#D21F20'
+                    }
+                },
+                data:[
+                    {name:citys,selected:true }
+                ]
+            },
+        ]
+    };
+
+      //初始化echarts实例
+    var myChart = echarts.init(document.getElementById('china-main'));
+
+    //使用制定的配置项和数据显示图表
+    myChart.setOption(optionMap);
+    // 点击地图切换右边分公司数据
+    myChart.on('click', function(params){
+        console.log(params);//此处写点击事件内容
+        var  name = params.name;
+       
+        // 未完待续
+         $.ajax({
+            url: '/addons/cms/api/getMoresclice',
+            type: 'POST',
+            data: {prvice:name},
+            dataType: 'json',
+            success: function (json) {
+                // obj.removeAttr("disabled");
+                if(json){
+                    if(json.item.length>0){
+                         myChart.setOption({
+                            series:[{data:[{name:name,selected:true}]}]
+                        })
+                        var str='<div class="swiper-wrapper">';
+                        for(var i=0;i<json.item.length;i++){
+                            str+='<div class="swiper-slide"><a href='+json.item[i].url+'><img src="'+json.item[i].image+'" alt=""></a><div class="coms-desc"><h2>'+json.item[i].title+'</h2><p>联系地址：'+json.item[i].detailsArea+'</p ><p>联系方式：'+json.item[i].contact_way+'</p ></div></div>'
+                        }
+                        str+='</div><div class="lr-group"><img src="/assets/addons/cms/src/image/l-btn.png" alt="" class="b-left"><img src="/assets/addons/cms/src/image/r-btn.png" alt="" class="b-right"></div>';
+                        $('.swiper-container-com').html(str);
+                        //duiyingchengshi 添加选中类
+                        $('li[data-item='+json.shi+']').addClass('c-red').siblings().removeClass('c-red')
+                         mySwiperCom = new Swiper ('.swiper-container-com', {
+                            loop: true, // 循环模式选项
+                            autoplay:{
+                            disableOnInteraction : false,
+                            delay:5000
+                            }, // 自动播放
+                            navigation: {
+                            nextEl: '.b-right',
+                            prevEl: '.b-left',
+                            },
+                        })
+                    }else{
+                        return false
+                    }
+
+                }else{
+                    alert('出错了！')
+                }
+            },
+            error: function () {
+                btn.removeAttr("disabled");
+                alert('刷新页面重试')
+
+            }
+        });
+        return false;
+    })
+
+
+        </script>

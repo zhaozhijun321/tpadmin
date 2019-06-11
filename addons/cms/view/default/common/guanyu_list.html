@@ -1,0 +1,8 @@
+<div class="g-navs">
+	<ul>
+	   {cms:channellist id="channel" typeid="$__CHANNEL__.id" condition="77<>id" type="brother" orderway="asc" ordery="weigh"}
+
+	    <li class="g-nav "><a class="{if condition="$__CHANNEL__.id eq $channel.id"}c-red{/if}"href="{$channel.url}">{$channel.name}</a></li>
+	    {/cms:channellist}
+	</ul>
+</div>

@@ -1,0 +1,13 @@
+<?php
+//000000000000
+ exit();?>
+a:4:{i:0;a:22:{s:2:"id";i:117;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"陈振灿";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fh9MRXJkF7x1fXVNSDkFlT_VkxAu.png";s:8:"keywords";s:0:"";s:11:"description";s:103:"企业财务技术实践专家
+长财财务系统高级咨询师
+国际注册管理咨询师（CMC）";s:4:"tags";s:27:"陈振灿技术服务中心";s:5:"weigh";i:117;s:5:"views";i:615;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550645816;s:10:"updatetime";i:1553678794;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:1;a:22:{s:2:"id";i:118;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:6:"刘昕";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FppolQayIROJfyARRb-hwDJIkMu3.png";s:8:"keywords";s:0:"";s:11:"description";s:103:"企业财务管理资深专家
+长财财务系统咨询师
+英国特许会计师公会注册会计师";s:4:"tags";s:27:"陈振灿技术服务中心";s:5:"weigh";i:118;s:5:"views";i:142;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550645993;s:10:"updatetime";i:1553678707;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:2;a:22:{s:2:"id";i:119;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:6:"王安";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fk_Gff-YNjFLueIToPxOnuAjKybp.png";s:8:"keywords";s:0:"";s:11:"description";s:114:"财务管理咨询专家
+长财财务系统咨询师
+十年以上跨国公司、民企财务管理实战经验
+";s:4:"tags";s:27:"陈振灿技术服务中心";s:5:"weigh";i:119;s:5:"views";i:65;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550646048;s:10:"updatetime";i:1553678630;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:3;a:22:{s:2:"id";i:120;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"刘玉芳";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FnYrIfDsb5EzOJeqp17Rvihqc8yy.png";s:8:"keywords";s:0:"";s:11:"description";s:123:"长财财务系统咨询师
+民营企业财务系统建设专家、高级会计师
+10余年民营企业财务实操经验";s:4:"tags";s:27:"陈振灿技术服务中心";s:5:"weigh";i:120;s:5:"views";i:68;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550646114;s:10:"updatetime";i:1553678534;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}}

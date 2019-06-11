@@ -1,0 +1,12 @@
+<?php
+//000000000000
+ exit();?>
+a:4:{i:0;a:22:{s:2:"id";i:160;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"朱宝珠";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fnh55QqdemnuADC3qKImrCFxlSeG.png";s:8:"keywords";s:0:"";s:11:"description";s:115:"企业财务管理实战专家
+长财财务系统核心专家
+拥有15年+跨国公司财务与管理工作经验";s:4:"tags";s:24:"总部技术服务中心";s:5:"weigh";i:160;s:5:"views";i:84;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550659127;s:10:"updatetime";i:1553668927;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:1;a:22:{s:2:"id";i:161;s:7:"user_id";i:0;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"雷正秋";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FruO3VGUhnC_7kMtjdTdVsPBsbGK.png";s:8:"keywords";s:0:"";s:11:"description";s:118:"资深投融资并购专家
+长财财务系统咨询师
+有十多年企业财税管理、资本运作的实战经验";s:4:"tags";s:24:"总部技术服务中心";s:5:"weigh";i:161;s:5:"views";i:81;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550659177;s:10:"updatetime";i:1553668854;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:2;a:22:{s:2:"id";i:162;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:9:"李业全";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/Fn5RD5u_rnlS0BH5I7hBHAs2Bk2g.png";s:8:"keywords";s:0:"";s:11:"description";s:123:"长财财务系统咨询师
+注册会计师，注册税务师，会计师
+20余年外企及民营上市公司任职经验";s:4:"tags";s:24:"总部技术服务中心";s:5:"weigh";i:162;s:5:"views";i:74;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550659228;s:10:"updatetime";i:1553668761;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}i:3;a:22:{s:2:"id";i:163;s:7:"user_id";i:1;s:10:"channel_id";i:63;s:8:"model_id";i:4;s:5:"title";s:6:"翁嘉";s:4:"flag";s:0:"";s:5:"image";s:50:"/uploads/20190220/FuKB7R_5TNz2NGoxCJmQQE-9rwWj.png";s:8:"keywords";s:0:"";s:11:"description";s:97:"企业财务技术实践专家
+长财财务系统核心专家
+工程项目管控首席咨询师";s:4:"tags";s:24:"总部技术服务中心";s:5:"weigh";i:163;s:5:"views";i:72;s:8:"comments";i:0;s:5:"likes";i:0;s:8:"dislikes";i:0;s:7:"diyname";s:0:"";s:10:"createtime";i:1550659260;s:10:"updatetime";i:1553669559;s:11:"publishtime";i:1550592000;s:10:"deletetime";N;s:4:"memo";s:0:"";s:6:"status";s:6:"normal";}}

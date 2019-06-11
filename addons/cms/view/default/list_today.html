@@ -1,0 +1,91 @@
+ {layout name="common/layout" /}
+  <link rel="stylesheet" href="__ADDON__/css/news-detail.css?v={cms:config name='site.version'/}">
+
+ <div class="n-detail">
+        <div class="n-box-left">
+            <!-- <h2>最近新闻</h2> -->
+            <ul class="to-title">
+                {cms:channellist id="channel"  type="son" typeid="90" orderway="asc" orderby="weigh"}
+                <li class="{if condition="$__CHANNEL__.id eq $channel.id"}c-red{/if}" onclick="local('{$channel.url}')">{$channel.name}</li>
+                {/cms:channellist}
+            </ul>
+             <div class="items">
+                <!-- 新闻小模块 -->
+                 {cms:pagelist id="list" orderway="desc" orderby="publishtime"}
+                <a href="{$list.url}">
+                    <div class="item">
+                        <div class="image">
+                            <img src="{$list.image}"  alt="">
+                        </div>
+                        
+                        <div class="cont">
+                            <h2>{$list.title}</h2>
+                            <p>{$list.description}</p>
+                            <p class="times">{:date('Y-m-d',$list.publishtime)}</p>
+                        </div>
+                    </div>
+                </a>
+                {/cms:pagelist}
+                
+            </div>
+            <?php $pagesize = ceil(count($__PAGELIST__)/7);?>
+            {if condition="$pagesize>1"}
+            <div class="loadMore">点击加载更多</div>
+            {/if}
+        </div>
+        <!-- 推荐新闻样式 -->
+        <div class="n-box-right rg-news">
+            <h2>推荐{cms:channel name="name" /}</h2>
+            <!-- 右侧分类集合 -->
+            <div class="r-items">
+                <!-- 右侧小分类 -->
+                 {cms:pagelist id="hot" row="7" orderby="weigh" orderway="asc"}
+                <a href="{$hot.url}">
+                    <div class="item">
+                        {$hot.img}
+                        <p>{$hot.title}</p>
+                    </div>
+                </a>
+                {/cms:pagelist}
+            </div>
+        </div>
+</div>
+          <script>
+            page=0;
+        $('.loadMore').click(function(){
+            var channel_id="{$__CHANNEL__->id}"
+            page++;
+            var btn = $(this);
+            btn.attr("disabled", "disabled");
+            $.ajax({
+                url: '/addons/cms/Channel/get_list',
+                type: 'POST',
+                data: {page,channel_id},
+                dataType: 'json',
+                success: function (json) {
+                    btn.removeAttr("disabled");
+                   if(json){
+                    // console.log(json)
+                    if(json.length>0){
+                        var str='';
+                        for(var i=0;i<json.length;i++){
+                            str+=' <a href='+json[i].url+'><div class=item> <div class=image><img src="'+json[i].image+'"></div><div class=cont><h2>'+json[i].title+'</h2><p>'+json[i].description+'</p><p class=times>'+json[i].publishtime+'</p></div></div></a>'
+                        }
+                        $('.items').append(str); 
+                    }else{
+                        $('.loadMore').html('已经到底部了')
+                    }
+                   
+                   }else{
+                    alert('出错了！')
+                   }
+                },
+                error: function () {
+                    btn.removeAttr("disabled");
+                     alert('刷新页面重试')
+
+                }
+            });
+            return false;
+        })
+    </script>

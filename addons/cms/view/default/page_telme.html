@@ -1,0 +1,42 @@
+{layout name="common/layout" /}
+<link rel="stylesheet" href="__ADDON__/css/telMe.css?v={cms:config name='site.version'/}">
+<style type="text/css">
+    body{
+        background:#ffffff;
+    }
+ </style>
+<div class="cont-box">
+    <div class="box-title">
+        <h2>{cms:page name="title" /}</h2>
+    </div>
+    <div class="conts">
+        <p class="title">长财咨询：__CDN__{$config.dizhi}</p>
+        <div class="map" id="container" style="height:700px;">
+    
+        </div>
+    </div>
+    
+</div>
+{php}$configs = get_addon_config('address');{/php}
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak={$configs.baidukey|default=''}"></script>
+ <script type="text/javascript">
+    $(function () {
+        // 百度地图API功能
+        // 百度地图API功能
+    var map = new BMap.Map("container");
+    map.centerAndZoom(new BMap.Point(116.331398,39.897445),14);
+    map.enableScrollWheelZoom(true);
+    var new_point = new BMap.Point({$configs['lng']},{$configs['lat']});
+        var marker = new BMap.Marker(new_point);  // 创建标注
+        map.addOverlay(marker);              // 将标注添加到地图中
+        map.panTo(new_point);  
+    
+    // 用经纬度设置地图中心点
+    // function theLocation(){
+    //     if(document.getElementById("longitude").value != "" && document.getElementById("latitude").value != ""){
+    //         map.clearOverlays(); 
+              
+    //     }
+    // }
+    });
+</script>      
