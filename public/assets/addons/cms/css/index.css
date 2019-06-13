@@ -618,6 +618,13 @@
     color: #333333;
     font-size: 14px;
     display: flex;
+    /* width: 1100px;
+    flex-wrap: wrap; */
+}
+.cates .chengshi{
+    color: #333333;
+    font-size: 14px;
+    display: flex;
     width: 1100px;
     flex-wrap: wrap;
 }

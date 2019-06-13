@@ -309,7 +309,7 @@
             </div>
             <!-- 分子公司城市分类 -->
             <div class="cates citys">
-                <ul class="cate-group ">
+                <ul class="cate-group chengshi">
                     {if condition="$zifen"}
                     {volist name="zifen" id="vo" offset="0" }
                     <li class="cate {if condition="$key==0"}c-red{/if}" {if condition="$key==0" }data-sheng='{$firstsheng[shortName]}'{/if}data-item="{$vo.id}">{$vo.shortName}</li>
