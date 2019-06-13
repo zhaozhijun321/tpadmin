@@ -154,7 +154,7 @@
 /* 新闻模块样式 */
 .news-box {
     width: 1100px;
-    padding: 100px 0;
+    padding: 40px 0;
     margin: 0 auto;
     /* background: #aff; */
 }
@@ -193,14 +193,14 @@
 } */
 .news-items {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 40px;
     overflow: hidden;
 }
 .news-items .item{
     /* padding-bottom: 25px; */
     /* border-bottom: 1px solid #E6E6E6; */
     display: flex;
-    width: 525px;
+    width: 535px;
     float: left;
 }
 .news-items .item:nth-child(2n) {
@@ -233,8 +233,8 @@
     transition: all .9s;
 }
 .news-items .item .item-con {
-    padding-left: 30px;
-    width: 223px;
+    padding-left: 20px;
+    width: 243px;
 }
 .news-items .item .item-con a>h5 {
     width: 100%;
@@ -271,13 +271,13 @@
 .guanyu {
     width: 100%;
     background: #F5F5F5;
-    padding:100px 0;
+    padding:40px 0;
 }
 .guanyu .box {
     width: 1100px;
     height: 520px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 25px;
     background:#fff;
     display: flex;
 }
@@ -366,8 +366,8 @@
 /* 产品与服务开始 */
 .product {
     width: 100%;
-    height:433px;
-    padding-top: 50px;
+    /* height:433px; */
+    /* padding-top: 40px; */
     box-sizing: border-box;
     background: #f5f5f5;
 }
@@ -378,9 +378,9 @@
 }
 .product .swiper-container2 {
     width: 100%;
-    height: 291px;
-    padding-bottom: 120px;
-    margin-top: 50px;
+    /* height: 291px; */
+    padding-bottom: 40px;
+    margin-top: 40px;
     box-sizing: border-box;
 }
 .p-items {
@@ -429,7 +429,7 @@
 }
 
 .swiper-container2>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
-    bottom: 80px;
+    bottom: 0px;
 }
 .swiper-container2 .swiper-pagination-bullet {background: #D8D8D8;opacity: 1;width: 10px;height: 10px;border-radius: 50%;}
 .swiper-container2 .swiper-pagination-bullet-active {background:#D21F20;}
@@ -438,11 +438,11 @@
 
 .team {
     width: 100%;
-    height:659px;
-    padding-top: 50px;
+    /* height:659px; */
+    padding-top: 20px;
     box-sizing: border-box;
     background: #F5F5F5;
-    height: 722px;
+    /* height: 722px; */
 }
 .team .t-box {
     width: 1100px;
@@ -454,7 +454,7 @@
     height: 530px;
     padding-bottom: 90px;
     box-sizing: border-box;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .t-items {
     width: 100%;
@@ -464,7 +464,7 @@
     justify-content: space-between;
 }
 .t-items li {
-    width: 252px;
+    width: 260px;
     height: 100%;
     background: #fff;
     position: relative;
@@ -485,7 +485,7 @@
 }
 .t-items li .t-imgs{
     width: 100%;
-    height: 252px;
+    height: 260px;
     overflow: hidden;
 }
 .t-items li .t-imgs>img{
@@ -603,14 +603,14 @@
     padding-bottom: 0px;
 }
 .tody {
-    padding-bottom: 100px;
+    padding-bottom: 40px;
 }
 .tody:last-child{
     /*padding-bottom: 0;*/
 }
 .cates {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
 }
@@ -618,11 +618,14 @@
     color: #333333;
     font-size: 14px;
     display: flex;
+    width: 1100px;
+    flex-wrap: wrap;
 }
 .cates .cate-group .cate{
     padding: 0 20px;
     line-height: 20px;
     position: relative;
+    margin-bottom: 15px;
 }
 .cates .cate-group .cate:hover{
     cursor: pointer;
@@ -713,7 +716,7 @@
 .imgs-box {
     width: 100%;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 40px;
 }
 .imgs-box .box{
     width: 1100px;
@@ -722,7 +725,10 @@
     margin-top: 50px;
 }
 .imgs-box .box img{
-width:inherit;
+    /* width:inherit; */
+    display: block;
+    width: 1100px;
+    height: 265px;
 }
 /* 更多城市按钮样式 */
 
@@ -864,8 +870,8 @@ width:inherit;
 /* 留言模块样式 */
 .liuyan {
     width: 100%;
-    height: 600px;
-    background: url(../src/image/ques-bg.png) no-repeat;
+    height: 464px;
+    background: url(../src/image/ques-bg.png) no-repeat center center;
     position: relative;
 }
 
@@ -904,13 +910,13 @@ width:inherit;
 }
 
 .liuyan .msg-form {
-    width: 420px;
-    height: 482px;
+    width: 384px;
+    height: 384px;
     background: #fff;
     position: absolute;
     top: 50px;
     right: 200px;
-    padding: 30px 50px;
+    padding: 40px;
     box-sizing: border-box;
 }
 .liuyan .msg-form .title {
@@ -925,11 +931,11 @@ width:inherit;
 }
 .liuyan .msg-form .input-group {
     width: 100%;
-    height: 50px;
+    height: 44px;
     display: flex;
     border-bottom: 1px solid #EBEBEB;
     overflow: hidden;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 .liuyan .msg-form .input-group .labels{
     width: 58px;
@@ -940,8 +946,8 @@ width:inherit;
 .liuyan .msg-form .input-group input{
     border: 0px;
     outline:none;
-    height: 52px;
-    line-height: 52px;
+    height: 44px;
+    line-height: 44px;
     width: 260px;
     color: #666666;
     font-size: 14px;
@@ -949,31 +955,31 @@ width:inherit;
 /* textarea::-webkit-input-placeholder */
 .liuyan .msg-form .input-group input::-webkit-input-placeholder{
     color: #CCCCCC;
-    height: 52px;
-    line-height: 52px;
+    height: 44px;
+    line-height: 44px;
     font-size: 14px;
 }
 /* textarea:-moz-placeholder */
 .liuyan .msg-form .input-group input:-moz-placeholder{
     color: #CCCCCC;
-    height: 52px;
-    line-height: 52px;
+    height: 44px;
+    line-height: 44px;
     font-size: 14px;
 
 }
 /* , textarea::-moz-placeholder  */
 .liuyan .msg-form .input-group input::-moz-placeholder{
     color: #CCCCCC;
-    height: 52px;
-    line-height: 52px;
+    height: 44px;
+    line-height: 44px;
     font-size: 14px;
 
 } 
 /* textarea:-ms-input-placeholder  */
 .liuyan .msg-form .input-group input:-ms-input-placeholder{
     color: #CCCCCC;
-    height: 52px;
-    line-height: 52px;
+    height: 44px;
+    line-height: 44px;
     font-size: 14px;
 }
 .liuyan .msg-form .btn {
@@ -984,7 +990,7 @@ width:inherit;
     font-size: 14px;
     text-align: center;
     background: #D21F20;
-    margin-top: 84px;
+    margin-top: 30px;
 }
 
 /* 留言提交之后的样式 */
@@ -1167,4 +1173,12 @@ width:inherit;
 }
 .date-com .date-cont .day-ke .lf-lr :hover{
     cursor: pointer;
+}
+
+
+/* 修改样式 */
+.box-title>a img{
+    display: block;
+    width: 20px;
+    height: 20px;
 }

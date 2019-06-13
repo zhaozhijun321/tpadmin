@@ -28,13 +28,13 @@
     .date-box {
         width: 100%;
         background: #F5F5F5;
-        padding-top: 100px;
+        padding-top: 40px;
     }
     .date-com {
         width: 1100px;
         margin: 0 auto;
         display: flex;
-        padding-top: 50px;
+        padding-top: 40px;
     }
     .date-com .cc_date {
         /* flex:1; */
@@ -151,19 +151,19 @@
         <div class="com-bottom">
             <div class="bot-box">
                 <!-- 关于我们 -->
-                <ul style="width:312px;">
+                <ul style="width:200px;">
                     <h5 class="title">关于长财</h5>
                     {cms:channellist  type="son" id="guanyuzi" typeid="72" model='6' orderway="asc"}
                     <li class="detail-name"><a href="{$guanyuzi.url}"  >{$guanyuzi.name}</a></li>
                     {/cms:channellist}
                 </ul>
-                <ul style="width:220px;">
+                <ul style="width:200px;">
                     <h5 class="title">产品与服务</h5>
                      {cms:channellist id="chanpinzi" type="son" orderway="asc" ordery="weigh" typeid="98"}
                     <li class="detail-name pro-name"><a href="{$chanpinzi.url}"  >{$chanpinzi.name}</a></li>
                     {/cms:channellist}
                 </ul>
-                <ul style="width:335px;">
+                <ul style="width:310px;">
                     <h5 class="title">联系我们</h5>
                     {if $config.qrcode}
                     <li class="detail-name"><a href="tel:__CDN__{$config.phone}">__CDN__{$config.phone}</a></li>
@@ -174,16 +174,25 @@
                     {/if}
                     {if $config.weibo}
 
-                    <a href="__CDN__{$config.weibo}"  >
+                    <a href="__CDN__{$config.weibo}" class="weibo-weibo" >
+                        刘国栋微博
                         <img src="__ADDON__/src/image/t-weibo.png" alt="" class="bot-weibo">
                     </a>
                     {/if}
 
                 </ul>
                 {if $config.qrcode}
-                <div class="bot-weixin">
+                <div class="bot-weixin ma1">
                     <img src="{:cdnurl($config[qrcode])}" alt="">
                     <span>关注长财咨询</span>
+                </div>
+                <div class="bot-weixin ma2">
+                    <img src="{:cdnurl($config[qrcode])}" alt="">
+                    <span>关注激励系统</span>
+                </div>
+                <div class="bot-weixin ma3">
+                    <img src="{:cdnurl($config[qrcode])}" alt="">
+                    <span>关注资本系统</span>
                 </div>
                 {/if}
             </div>

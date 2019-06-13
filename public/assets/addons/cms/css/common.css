@@ -63,7 +63,7 @@ margin-bottom: 30px;
 }
 .com-bottom .bot-box ul .detail-name {
 margin-bottom: 20px;
-display: inline-block;
+/* display: inline-block; */
 margin-right: 50px;
 line-height: 20px;
 min-width:56px;
@@ -214,4 +214,23 @@ margin-bottom: 20px;
 cursor: pointer;
 }
 
-
+.weibo-weibo {
+    display: flex;
+    color: #B3B3B3;
+    font-size: 14px;
+}
+.weibo-weibo img {
+    margin-left: 5px; 
+}
+.com-bottom .bot-box .ma3 {
+    /* right: 0; */
+    margin-right: 0;
+}
+.com-bottom .bot-box .ma2 {
+    /* right: 125; */
+    margin-right: 125px;
+}
+.com-bottom .bot-box .ma1 {
+    /* right: 250; */
+    margin-right: 250px;
+}

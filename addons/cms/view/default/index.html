@@ -13,33 +13,108 @@
             <!-- 如果需要分页器 -->
             <div class="swiper-pagination1 swiper-pagination"></div>
         </div>
-        <!-- 最近新闻 -->
-        <div class="news-box">
-            {cms:channellist id="xinwen" cache="true" typeid="3"}
-            <div class="box-title" onclick="local('{$xinwen.url}')">
-                <h2 class="a-link">最近新闻</h2>
-                <a href="{$xinwen.url}">
+        <!-- 今日长财 -->
+        <div class="news-box todys" style="background: #fff">
+            {cms:channellist id="jinri" cache="true" typeid="92"}
+            <div class="box-title" onclick="local('{$jinri.url}')">
+                <h2 class="a-link">今日长财</h2>
+                <a href="{$jinri.url}">
                     <img src="__ADDON__/src/image/more2.png" alt="">
                 </a>
-
             </div>
             {/cms:channellist}
 
-            <div class="news-items">
-                {cms:arclist id="new" channel="3,7,5,4" orderway="desc" orderby="publishtime" row="4"}
+            <!-- 今日长才分类 -->
+            <div class="cates">
+                <ul class="cate-group">
+                    {cms:channellist id="channel"  typeid="90"  type="son" orderway="asc" orderby="weigh"}
+                    
+                    <li class="cate {if condition='$key==0'} c-red {/if}">{$channel.name}</li>
+                    {/cms:channellist}
+                </ul>
+            </div>
+            <!-- 此处代码每个模块对应一部分 需要全部遍历制作显示隐藏切换效果 志军注意-->
+            <!-- 精彩回放 -->
+            <div class="news-items tody ">
+                {cms:arclist id="item" row="4" orderby="id" orderway="desc" orderby="publishtime" channel="92"}
                 <div class="item">
-                    {$new.imglink}
+                    <a href="{$item.url}">
+                        {$item.img}
+                    </a>
                     <div class="item-con">
-                        <a href="{$new.url}">
-                            <h5>{$new.title}</h5>
+                        <a href="{$item.url}">
+                            <h5>{$item.title}</h5>
                         </a>
-                        <p class="cont">{$new.description}</p>
-                        <p class="date">{:date('Y.m.d',$new.publishtime)}</p>
+                        <p class="cont">{$item.description}</p>
+                        <p class="date">{:date('Y.m.d',$item.publishtime)}</p>
                     </div>
                 </div>
                 {/cms:arclist}
             </div>
+            <!-- 客户见证 -->
+            <div class="news-items tody hide">
+                 {cms:arclist id="item" row="4" orderby="id" orderway="desc" orderby="publishtime" channel="93"}
+                <div class="item">
+                    <a href="{$item.url}">
+                       {$item.img}
+                    </a>
+                    <div class="item-con">
+                        <a href="{$item.url}">
+                            <h5>{$item.title}</h5>
+                        </a>
+                        <p class="cont">{$item.description}</p>
+                        <p class="date">{:date('Y.m.d',$item.publishtime)}</p>
+                    </div>
+                </div>
+                {/cms:arclist}
+            </div>
+            <!-- 长财猎头 -->
+          <!--  <div class="news-items tody hide">
+                {cms:arclist id="lietou" row="4" orderby="id" orderway="desc" channel="94"}
+                <div class="item">
+                    <a href="{$lietou.url}">
+                       {$lietou.img}
+                    </a>
+                    <div class="item-con">
+                        <a href="{$lietou.url}">
+                            <h5>{$lietou.title}</h5>
+                        </a>
+                        <p class="cont">{$lietou.description}</p>
+                        <p class="date">{:date('Y.m.d',$lietou.publishtime)}</p>
+                    </div>
+                </div>
+                {/cms:arclist}
+            </div> -->
+            <!-- 研讨会信息 -->
+            <div class="to-box tody hide">
+                  <!--   <div class="swiper-container4 swiper-container">
+                    <div class="swiper-wrapper"> -->
+                        <!-- <div class="swiper-slide"> -->
+                            <ul class="items">
+                                {foreach name="yantaohuis" item="yantaohui"}
+                                <li class="item" onclick="local('{$yantaohui->channel->url}')">
+                                    <h2 class="title">
+                                        {$yantaohui->chanpin->title}
+                                       </h2>
+                                    <p><span>讲师： </span><span>{if condition="!empty($yantaohui->archives)"}{foreach name="$yantaohui->archives" item="laoshi"}{$laoshi->title}&nbsp;{/foreach}{/if}</span></p>
+                                    <p><span>时间：</span><span>{:date('m.d',strtotime($yantaohui->begintime))}-{:date('d',strtotime($yantaohui.endtime))}</span></p>
+                                    <p class="address"><span>地点：</span><span>{:strip_tags($yantaohui->area)}</span></p>
+                                   {if condition="$yantaohui->qitafile"}
+                                    <img src="__ADDON__/src/image/icon-pdf.png" alt="" class="download" data-id={$yantaohui.id}>
+                                    {/if}
+                                
+                                </li>
+                                {/foreach}
+
+                            </ul>
+                        <!-- </div> -->
+                    <!-- 如果需要分页器 -->
+             <!--        <div class="swiper-pagination4 swiper-pagination"></div> -->
+                <!-- </div> -->
+            </div>
+            
         </div>
+        
         <!-- 日历部分 -->
         <div class="date-box">
             {cms:channellist id="kecheng" cache="true" typeid="97"}
@@ -98,7 +173,7 @@
                         <li><p class="nums">100+</p><p class="txt">专家老师</p></li>
                         <li><p class="nums">10000+</p><p class="txt">服务客户数量</p></li>
                         <li><p class="nums">1000+</p><p class="txt">员工</p></li>
-                        <li><p class="nums">60+</p><p class="txt">分公司</p></li>
+                        <li><p class="nums">100+</p><p class="txt">分公司</p></li>
                     </ul>
                 </div>
 
@@ -200,107 +275,32 @@
                 </div>
             </div>
         </div>
-        <!-- 今日长财 -->
-
-       <div class="news-box todys" style="background: #fff">
-            {cms:channellist id="jinri" cache="true" typeid="92"}
-            <div class="box-title" onclick="local('{$jinri.url}')">
-                <h2 class="a-link">今日长财</h2>
-                <a href="{$jinri.url}">
+        <!-- 最近新闻 -->
+        <div class="news-box">
+            {cms:channellist id="xinwen" cache="true" typeid="3"}
+            <div class="box-title" onclick="local('{$xinwen.url}')">
+                <h2 class="a-link">政策速递</h2>
+                <a href="{$xinwen.url}">
                     <img src="__ADDON__/src/image/more2.png" alt="">
                 </a>
+
             </div>
             {/cms:channellist}
 
-            <!-- 今日长才分类 -->
-            <div class="cates">
-                <ul class="cate-group">
-                    {cms:channellist id="channel"  typeid="90"  type="son" orderway="asc" orderby="weigh"}
-                    
-                    <li class="cate {if condition='$key==0'} c-red {/if}">{$channel.name}</li>
-                    {/cms:channellist}
-                </ul>
-            </div>
-            <!-- 此处代码每个模块对应一部分 需要全部遍历制作显示隐藏切换效果 志军注意-->
-            <!-- 精彩回放 -->
-            <div class="news-items tody ">
-                {cms:arclist id="item" row="4" orderby="id" orderway="desc" orderby="publishtime" channel="92"}
+            <div class="news-items">
+                {cms:arclist id="new" channel="3,7,5,4" orderway="desc" orderby="publishtime" row="4"}
                 <div class="item">
-                    <a href="{$item.url}">
-                        {$item.img}
-                    </a>
+                    {$new.imglink}
                     <div class="item-con">
-                        <a href="{$item.url}">
-                            <h5>{$item.title}</h5>
+                        <a href="{$new.url}">
+                            <h5>{$new.title}</h5>
                         </a>
-                        <p class="cont">{$item.description}</p>
-                        <p class="date">{:date('Y.m.d',$item.publishtime)}</p>
+                        <p class="cont">{$new.description}</p>
+                        <p class="date">{:date('Y.m.d',$new.publishtime)}</p>
                     </div>
                 </div>
                 {/cms:arclist}
             </div>
-            <!-- 客户见证 -->
-            <div class="news-items tody hide">
-                 {cms:arclist id="item" row="4" orderby="id" orderway="desc" orderby="publishtime" channel="93"}
-                <div class="item">
-                    <a href="{$item.url}">
-                       {$item.img}
-                    </a>
-                    <div class="item-con">
-                        <a href="{$item.url}">
-                            <h5>{$item.title}</h5>
-                        </a>
-                        <p class="cont">{$item.description}</p>
-                        <p class="date">{:date('Y.m.d',$item.publishtime)}</p>
-                    </div>
-                </div>
-                {/cms:arclist}
-            </div>
-            <!-- 长财猎头 -->
-          <!--  <div class="news-items tody hide">
-                {cms:arclist id="lietou" row="4" orderby="id" orderway="desc" channel="94"}
-                <div class="item">
-                    <a href="{$lietou.url}">
-                       {$lietou.img}
-                    </a>
-                    <div class="item-con">
-                        <a href="{$lietou.url}">
-                            <h5>{$lietou.title}</h5>
-                        </a>
-                        <p class="cont">{$lietou.description}</p>
-                        <p class="date">{:date('Y.m.d',$lietou.publishtime)}</p>
-                    </div>
-                </div>
-                {/cms:arclist}
-            </div> -->
-            <!-- 研讨会信息 -->
-            <div class="to-box tody hide">
-                  <!--   <div class="swiper-container4 swiper-container">
-                    <div class="swiper-wrapper"> -->
-                        <!-- <div class="swiper-slide"> -->
-                            <ul class="items">
-                                {foreach name="yantaohuis" item="yantaohui"}
-                                <li class="item" onclick="local('{$yantaohui->channel->url}')">
-                                    <h2 class="title">
-                                        {$yantaohui->chanpin->title}
-                                       </h2>
-                                    <p><span>讲师： </span><span>{if condition="!empty($yantaohui->archives)"}{foreach name="$yantaohui->archives" item="laoshi"}{$laoshi->title}&nbsp;{/foreach}{/if}</span></p>
-                                    <p><span>时间：</span><span>{:date('m.d',strtotime($yantaohui->begintime))}-{:date('d',strtotime($yantaohui.endtime))}</span></p>
-                                    <p class="address"><span>地点：</span><span>{:strip_tags($yantaohui->area)}</span></p>
-                                   {if condition="$yantaohui->qitafile"}
-                                    <img src="__ADDON__/src/image/icon-pdf.png" alt="" class="download" data-id={$yantaohui.id}>
-                                    {/if}
-                                
-                                </li>
-                                {/foreach}
-
-                            </ul>
-                        <!-- </div> -->
-                    <!-- 如果需要分页器 -->
-             <!--        <div class="swiper-pagination4 swiper-pagination"></div> -->
-                <!-- </div> -->
-            </div>
-            
         </div>
         <!-- 分子公司 -->
         <div class="guanyu comps">
@@ -311,13 +311,13 @@
             <div class="cates citys">
                 <ul class="cate-group ">
                     {if condition="$zifen"}
-                    {volist name="zifen" id="vo" offset="0" length="5"}
+                    {volist name="zifen" id="vo" offset="0" }
                     <li class="cate {if condition="$key==0"}c-red{/if}" {if condition="$key==0" }data-sheng='{$firstsheng[shortName]}'{/if}data-item="{$vo.id}">{$vo.shortName}</li>
                     {/volist}
                     {/if}
                 </ul>
                 <!-- 更多城市按钮-->
-                <img src="__ADDON__/src/image/more-city.png" class="more-city"  alt="">
+                <!-- <img src="__ADDON__/src/image/more-city.png" class="more-city"  alt=""> -->
             </div>
             <div class="box maps-box">
                 <!-- 分子公司左边 -->
@@ -352,7 +352,7 @@
             <div class="box-title">
                 <h2>合作企业</h2>
             </div>
-            <div class="box" style="margin-top:80px;height: 365px;margin-bottom: 100px">
+            <div class="box" style="margin-top:40px;height: 265px;margin-bottom: 40px">
                 {cms:blocklist id="hezuoqiye"  name="hezuoqiye"}
                 <img src="{$hezuoqiye.image}" alt="">
                 {/cms:blocklist}
